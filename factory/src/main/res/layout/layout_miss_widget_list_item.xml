@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/lay_8">
+
+    <TextView
+        android:id="@+id/txt_color_circle"
+        android:layout_width="@dimen/size_12"
+        android:layout_height="@dimen/size_12"
+        android:layout_centerVertical="true"
+        android:alpha="0.75"
+        android:background="@color/cyan_500" />
+
+    <TextView
+        android:id="@+id/txt_event_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/lay_16"
+        android:layout_marginRight="@dimen/lay_16"
+        android:layout_toRightOf="@id/txt_color_circle"
+        android:text="@string/miss_widget_list_item_day"
+        android:textColor="@color/black_alpha_224"
+        android:textSize="@dimen/font_16" />
+
+    <TextView
+        android:id="@+id/txt_event_distance_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/lay_4"
+        android:layout_marginLeft="@dimen/lay_8"
+        android:layout_marginRight="@dimen/lay_8"
+        android:layout_marginTop="@dimen/lay_4"
+        android:gravity="center"
+        android:text="@string/miss_widget_list_item_day"
+        android:textColor="@color/cyan_700"
+        android:textSize="@dimen/font_18" />
+
+</RelativeLayout>

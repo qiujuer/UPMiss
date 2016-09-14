@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text.Background.Blue.Fill" parent="android:style/Widget.TextView">
+        <item name="android:background">@drawable/ic_radio_edit_bg_fill</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/size_48</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">@dimen/lay_12</item>
+        <item name="android:paddingRight">@dimen/lay_12</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <style name="Text.Set.Background.Fill.Black" parent="android:style/Widget.TextView">
+        <item name="android:background">@color/black_alpha_224</item>
+        <item name="android:layout_width">@dimen/activity_setting_item_height</item>
+        <item name="android:layout_height">@dimen/activity_setting_item_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+    </style>
+
+    <style name="Text.Account.Title.Sub" parent="android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/lay_8</item>
+        <item name="android:paddingRight">@dimen/lay_8</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/white_alpha_192</item>
+    </style>
+
+    <style name="Text.Detail.Sub" parent="android:style/Widget.TextView">
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/white_alpha_208</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="Text.Find.Title" parent="@style/Base.TextAppearance.AppCompat.Title">
+        <item name="fontPath">fonts/FZLanTingHeiS-DB1-GB-Regular.TTF</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:textColor">@color/blue_grey_800</item>
+        <item name="android:shadowColor">@color/white</item>
+        <item name="android:shadowRadius">15</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/size_156</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="Text.Search.Kit" parent="android:style/Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">@dimen/lay_16</item>
+        <item name="android:paddingBottom">@dimen/lay_8</item>
+        <item name="android:paddingLeft">@dimen/lay_16</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:paddingRight">@dimen/lay_16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+    </style>
+
+    <style name="Text.About.Sub" parent="Genius.Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">@dimen/lay_4</item>
+        <item name="android:textSize">@dimen/font_16</item>
+        <item name="android:paddingRight">@dimen/lay_4</item>
+        <item name="android:textColor">@color/grey_800</item>
+        <item name="android:layout_marginLeft">@dimen/lay_16</item>
+        <item name="android:layout_marginRight">@dimen/lay_16</item>
+        <item name="android:layout_marginTop">@dimen/lay_16</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowColor">@color/black_alpha_160</item>
+        <item name="gBorder">left</item>
+        <item name="gBorderColor">@color/grey_700</item>
+        <item name="gBorderSize">2dp</item>
+        <item name="gFont">Hero.otf</item>
+        <item name="fontPath">fonts/Hero.otf</item>
+    </style>
+</resources>

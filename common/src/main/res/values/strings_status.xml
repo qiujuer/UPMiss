@@ -1,0 +1,39 @@
+<resources>
+    <string name="status_app_info_error">App信息错误!</string>
+
+    <string name="status_error_un_know">未知错误!</string>
+    <string name="status_server_error">服务器错误!</string>
+
+    <string name="status_sync_succeed">同步成功</string>
+    <string name="status_sync_failed">同步失败!</string>
+
+    <string name="status_account_email_null">邮箱不能为空!</string>
+    <string name="status_account_email_incorrect">邮箱格式不正确!</string>
+    <string name="status_account_password_incorrect">密码长度应处于6~18位之间!</string>
+    <string name="status_account_password_not_confirm">密码与确认密码必须相同!</string>
+
+    <string name="status_account_register_running">正在注册…</string>
+    <string name="status_account_login_running">正在登陆…</string>
+    <string name="status_account_bind_running">绑定中…</string>
+    <string name="status_account_bind_succeed">绑定成功!</string>
+    <string name="status_account_bind_failed">绑定失败,请尝试登录!</string>
+
+    <string name="status_account_login_need">使用云同步需要登陆账户~</string>
+    <string name="status_account_login_expire">当前登录过期,需重新登录~</string>
+    <string name="status_account_login_account_error">用户名错误!</string>
+    <string name="status_account_login_password_error">密码错误!</string>
+
+    <string name="status_account_register_have_email">已存在当前账户!</string>
+    <string name="status_account_register_error">注册失败!</string>
+    <string name="status_account_register_not_email">邮箱格式不正确!</string>
+
+    <string name="status_account_phone_unbind">设备未绑定!</string>
+
+    <string name="status_network_error">网络故障!</string>
+    <string name="status_network_unlink">未连接网络!</string>
+
+    <string name="status_opt_delete_ok">删除成功！</string>
+    <string name="status_opt_delete_error">删除失败，请稍后再试…</string>
+    <string name="status_opt_save_ok">保存截图成功！</string>
+    <string name="status_opt_save_error">保存截图失败，请检查权限！</string>
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+    <attr name="markerSize" format="dimension" />
+    <attr name="marker" format="color|reference" />
+    <attr name="beginLine" format="color|reference" />
+    <attr name="endLine" format="color|reference" />
+    <attr name="lineSize" format="dimension" />
+    <declare-styleable name="DirectionView">
+        <attr name="iLineSize" format="dimension" />
+        <attr name="iLineColor" format="color" />
+    </declare-styleable>
+</resources>

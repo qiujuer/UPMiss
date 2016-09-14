@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="windows_background">#fff0f0f0</color>
+    <color name="activity_float_background">@color/black_alpha_16</color>
+    <color name="cyan_alpha_96">#6000bcd4</color>
+    <color name="cyan_alpha_128">#8000bcd4</color>
+    <color name="cyan_alpha_192">#c000bcd4</color>
+    <color name="cyan_alpha_208">#d000bcd4</color>
+</resources>

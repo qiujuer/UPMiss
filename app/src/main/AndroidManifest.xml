@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.qiujuer.tips">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".Application"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme">
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- aop -->
+        <activity
+            android:name=".LaunchActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Launch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main" />
+        <activity
+            android:name=".view.activity.RecordDetailActivity"
+            android:label="@string/title_activity_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.RecordEditActivity"
+            android:label="@string/title_activity_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.RecordAddActivity"
+            android:label="@string/title_activity_create"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.AccountActivity"
+            android:label="@string/title_activity_account"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Account" />
+        <activity
+            android:name=".view.activity.ShareActivity"
+            android:label="@string/title_activity_share"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:label="@string/title_activity_wxentry"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Account" />
+        <activity
+            android:name=".view.activity.GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme" />
+        <activity
+            android:name=".view.activity.UserActivity"
+            android:label="@string/title_activity_user"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.SearchKitActivity"
+            android:label="@string/title_activity_search_kit"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.FindActivity"
+            android:label="@string/title_activity_find"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.ContactAddActivity"
+            android:label="@string/title_activity_contacts_add"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.ContactEditActivity"
+            android:label="@string/title_activity_contacts_edit"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.ContactDetailActivity"
+            android:label="@string/title_activity_contacts_detail"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Trans" />
+        <activity
+            android:name=".view.activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:theme="@style/Theme.Trans"/>
+    </application>
+
+</manifest>

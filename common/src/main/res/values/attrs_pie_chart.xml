@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="PieChart">
+        <attr name="iChecked" format="boolean" />
+        <attr name="iRingSize" format="dimension" />
+        <attr name="iRingBackColor" format="color" />
+        <attr name="iRingForeColor" format="color" />
+    </declare-styleable>
+</resources>

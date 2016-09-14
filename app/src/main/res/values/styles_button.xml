@@ -1,0 +1,32 @@
+<resources>
+
+    <style name="Button.Transparent" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:textAppearance">@style/Button.Transparent.textAppearance</item>
+    </style>
+
+    <style name="Button.Transparent.textAppearance" parent="@style/TextAppearance.AppCompat.Button">
+        <item name="android:textColor">@color/color_btn_light_blue</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">2</item>
+        <item name="android:shadowColor">@color/light_blue_900</item>
+    </style>
+
+
+    <style name="Button.Background.Purple.Fill" parent="@style/Genius.Widget.Button">
+        <item name="android:background">@drawable/ic_btn_bg_fill_purple</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingLeft">@dimen/lay_16</item>
+        <item name="android:paddingRight">@dimen/lay_16</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/font_14</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+        <item name="android:layout_gravity">start</item>
+    </style>
+</resources>

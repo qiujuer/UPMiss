@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="CalendarView">
+        <attr name="iMainColor" format="color" />
+    </declare-styleable>
+</resources>

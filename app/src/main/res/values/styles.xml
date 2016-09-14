@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme" parent="Theme.Base">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade</item>
+    </style>
+
+    <style name="Theme.Main" parent="Theme">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade</item>
+    </style>
+
+    <style name="Theme.Trans" parent="Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/trans</item>
+        <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade</item>
+    </style>
+
+    <style name="Theme.Launch" parent="Theme">
+        <item name="android:windowBackground">@drawable/ic_launch_bg</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade.Scale</item>
+    </style>
+
+    <style name="Theme.Account" parent="Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/trans</item>
+        <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade.Account</item>
+    </style>
+
+    <style name="Theme.AnimationStyle.Fade.Scale" parent="Theme.AnimationStyle.Fade">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_entry_fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_entry_scale_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_entry_fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_entry_scale_out</item>
+    </style>
+
+    <style name="Theme.AnimationStyle.Fade.Account" parent="Theme.AnimationStyle.Fade">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_in_slide_right_account</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_out_slide_left_account</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_in_slide_right_account</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_out_slide_left_account</item>
+    </style>
+
+    <style name="Theme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

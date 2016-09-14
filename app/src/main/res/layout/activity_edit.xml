@@ -1,0 +1,201 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_float_background"
+    android:orientation="vertical"
+    tools:context=".view.activity.RecordEditActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+    <LinearLayout
+        android:id="@+id/lay_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/anim_in_list_slide_alpha_bottom_long"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/lay_32"
+        android:paddingRight="@dimen/lay_32"
+        android:paddingTop="@dimen/blur_content_top">
+
+        <LinearLayout
+            android:id="@+id/edit_lay_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_brief" />
+
+            <EditText
+                android:id="@+id/edit_edit_brief"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:inputType="text"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_type" />
+
+            <RadioGroup
+                android:id="@+id/edit_radio_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/edit_radio_type_birthday"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/edit_radio_type_birthday"
+                    style="@style/Radio.Edit.Fill"
+                    android:tag="1"
+                    android:text="@string/txt_type_birthday" />
+
+                <RadioButton
+                    android:id="@+id/edit_radio_type_memorial"
+                    style="@style/Radio.Edit.Fill"
+                    android:tag="2"
+                    android:text="@string/txt_type_memorial" />
+
+                <RadioButton
+                    android:id="@+id/edit_radio_type_future"
+                    style="@style/Radio.Edit.Fill"
+                    android:tag="3"
+                    android:text="@string/txt_type_future" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_lunar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_lunar" />
+
+            <RadioGroup
+                android:id="@+id/edit_radio_time_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/edit_radio_time_type_lunar"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/edit_radio_time_type_lunar"
+                    style="@style/Radio.Edit.Fill"
+                    android:text="@string/txt_date_lunar" />
+
+                <RadioButton
+                    android:id="@+id/edit_radio_time_type_solar"
+                    style="@style/Radio.Edit.Fill"
+                    android:text="@string/txt_date_sun" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_date" />
+
+            <TextView
+                android:id="@+id/edit_txt_time"
+                style="@style/Text.Background.Blue.Fill"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:text="@string/txt_date_null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_color" />
+
+            <View
+                android:id="@+id/edit_view_color"
+                android:layout_width="@dimen/activity_edit_item_width"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:background="@color/orange_500" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <ImageView
+                style="@style/Image.Edit.Fill"
+                android:contentDescription="@string/txt_null"
+                android:src="@mipmap/ic_tip_contact" />
+
+            <TextView
+                android:id="@+id/txt_view_contact_name"
+                android:layout_width="@dimen/lay_96"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:background="@color/cyan_500"
+                android:gravity="center"
+                android:textColor="@color/white_alpha_224" />
+        </LinearLayout>
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_36"
+            android:layout_marginTop="@dimen/lay_32"
+            android:background="@color/purple_500"
+            android:paddingBottom="0dp"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="0dp"
+            android:text="@string/btn_user_save"
+            android:textColor="@color/white_alpha_224"
+            app:gTouchCornerRadius="0dp"
+            app:gTouchEffect="ripple" />
+
+    </LinearLayout>
+</LinearLayout>

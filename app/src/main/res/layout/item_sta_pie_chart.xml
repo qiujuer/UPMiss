@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:paddingLeft="@dimen/lay_8"
+    android:paddingRight="@dimen/lay_8">
+
+    <net.qiujuer.tips.common.widget.PieChart
+        android:id="@+id/item_sta_pie_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/lay_4"
+        android:layout_marginRight="@dimen/lay_4"
+        android:maxHeight="@dimen/size_96"
+        android:maxWidth="@dimen/size_96"
+        android:padding="@dimen/lay_28"
+        android:src="@mipmap/ic_icon_memorial"
+        app:iRingForeColor="@color/white_alpha_224"
+        app:iRingSize="@dimen/lay_4" />
+
+    <TextView
+        android:id="@+id/item_sta_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_sta_pie_chart"
+        android:layout_centerHorizontal="true"
+        android:text="@string/txt_null"
+        android:textColor="@color/cyan_700"
+        android:textSize="@dimen/font_12" />
+</RelativeLayout>

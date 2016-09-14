@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/cyan_500</item>
+        <item name="colorPrimaryDark">@color/cyan_700</item>
+        <item name="colorAccent">@color/cyan_500</item>
+        <item name="drawerArrowStyle">@style/Theme.AppCompat.DrawerArrowStyle</item>
+
+
+        <item name="homeAsUpIndicator">@mipmap/ic_action_find</item>
+
+        <!-- Toolbar styles -->
+        <item name="toolbarStyle">@style/Theme.ToolBarStyle</item>
+        <item name="toolbarNavigationButtonStyle">
+            @style/Widget.AppCompat.Toolbar.Button.Navigation
+        </item>
+
+        <item name="android:actionBarStyle">@style/Theme.ActionBarStyle</item>
+        <item name="android:textColorPrimary">@color/grey_500</item>
+
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@color/windows_background</item>
+
+        <!--<item name="android:windowShowWallpaper">false</item>-->
+
+        <!-- In this custom widget style -->
+        <item name="gTextViewStyle">@style/Genius.Widget.TextView</item>
+        <item name="gButtonStyle">@style/Genius.Widget.Button</item>
+        <item name="gFloatActionButtonStyle">@style/Genius.Widget.FloatActionButton</item>
+        <item name="gSeekBarStyle">@style/Genius.Widget.SeekBar</item>
+        <item name="gCheckBoxStyle">@style/Genius.Widget.CompoundButton.CheckBox</item>
+        <item name="gEditTextStyle">@style/Genius.Widget.EditText</item>
+        <item name="gLoadingStyle">@style/Genius.Widget.Loading</item>
+    </style>
+
+    <style name="Theme.AppCompat.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="Theme.ActionBarStyle" parent="android:style/Widget.DeviceDefault.Light.ActionBar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:backgroundStacked">?attr/colorPrimary</item>
+        <item name="android:backgroundSplit">?attr/colorPrimary</item>
+        <!-- useLogo|showHome|showTitle -->
+        <item name="android:displayOptions">showTitle</item>
+    </style>
+
+    <style name="Theme.ToolBarStyle" parent="Widget.AppCompat.Toolbar">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="collapseIcon">@mipmap/ic_action_find</item>
+        <item name="titleTextAppearance">@style/Theme.ToolBarStyle.TitleTextAppearance</item>
+        <item name="android:textAppearance">@style/Theme.ToolBarStyle.TitleTextAppearance</item>
+    </style>
+
+    <style name="Theme.ToolBarStyle.TitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white_alpha_240</item>
+    </style>
+
+    <style name="Theme.ToolBarStyle.Blur.TitleTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Theme.AnimationStyle.Fade" parent="android:style/Animation.Activity">
+        <!--<item name="android:windowEnterAnimation">@anim/anim_activity_fade_in</item>-->
+        <!--<item name="android:windowExitAnimation">@anim/anim_activity_fade_out</item>-->
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_activity_fade_out</item>
+    </style>
+
+    <style name="Theme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowBackground">@drawable/ic_dialog_material_background_light</item>
+        <item name="windowMinWidthMajor">100%</item>
+        <item name="windowMinWidthMinor">100%</item>
+    </style>
+</resources>

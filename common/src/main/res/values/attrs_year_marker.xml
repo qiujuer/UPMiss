@@ -1,0 +1,10 @@
+<resources>
+    <attr name="YearStyle" format="reference" />
+    <declare-styleable name="YearMarker">
+        <attr name="markerSize" />
+        <attr name="marker" />
+        <attr name="beginLine" />
+        <attr name="endLine" />
+        <attr name="lineSize" />
+    </declare-styleable>
+</resources>

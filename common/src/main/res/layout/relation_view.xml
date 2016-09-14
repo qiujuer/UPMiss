@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/relation_radioGroup_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/relation_radioGroup_gender_man"
+        android:orientation="horizontal"
+        android:padding="@dimen/lay_8">
+
+        <RadioButton
+            android:id="@+id/relation_radioGroup_gender_man"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_relation_man" />
+
+        <RadioButton
+            android:id="@+id/relation_radioGroup_gender_woman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contacts_relation_woman" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_man_and_wife"
+            style="@style/View.Relation.Fill"
+            android:tag="1" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_younger_brother_and_sister"
+            style="@style/View.Relation.Fill"
+            android:tag="2" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_boyfriend_and_girlfriend"
+            style="@style/View.Relation.Fill"
+            android:tag="3" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_parents"
+            style="@style/View.Relation.Fill"
+            android:tag="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_children"
+            style="@style/View.Relation.Fill"
+            android:tag="5" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_elder_brother_and_sister"
+            style="@style/View.Relation.Fill"
+            android:tag="6" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_sworn_followers"
+            style="@style/View.Relation.Fill"
+            android:tag="7" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_friend"
+            style="@style/View.Relation.Fill"
+            android:tag="8" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_schoolmate"
+            style="@style/View.Relation.Fill"
+            android:tag="9" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_elder"
+            style="@style/View.Relation.Fill"
+            android:tag="10" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_contemporaries"
+            style="@style/View.Relation.Fill"
+            android:tag="11" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_junior"
+            style="@style/View.Relation.Fill"
+            android:tag="12" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_teacher"
+            style="@style/View.Relation.Fill"
+            android:tag="13" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_colleague"
+            style="@style/View.Relation.Fill"
+            android:tag="14" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_client"
+            style="@style/View.Relation.Fill"
+            android:tag="15" />
+
+        <RadioButton
+            android:id="@+id/relation_rdoBtn_leader"
+            style="@style/View.Relation.Fill"
+            android:tag="16" />
+    </LinearLayout>
+</LinearLayout>

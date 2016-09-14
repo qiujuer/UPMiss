@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="IDefaultTimeLineStyle">
+        <item name="markerSize">24dp</item>
+        <item name="marker">@drawable/ic_timeline_default_marker</item>
+        <item name="beginLine">@color/black_alpha_32</item>
+        <item name="endLine">@color/black_alpha_32</item>
+        <item name="lineSize">2dp</item>
+    </style>
+
+    <style name="IDefaultContactsMarkStyle">
+        <item name="markerSize">24dp</item>
+        <item name="marker">@drawable/ic_contacts_default_marker</item>
+        <item name="beginLine">@null</item>
+        <item name="endLine">@null</item>
+        <item name="lineSize">2dp</item>
+    </style>
+
+    <style name="IDefaultYearStyle">
+        <item name="markerSize">24dp</item>
+        <item name="marker">@drawable/ic_year_default_marker</item>
+        <item name="beginLine">@color/grey_300</item>
+        <item name="endLine">@color/grey_300</item>
+        <item name="lineSize">2dp</item>
+    </style>
+</resources>
+

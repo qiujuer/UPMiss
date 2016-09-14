@@ -1,0 +1,23 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.activity.UserActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+    <fragment
+        android:id="@+id/fragment_container"
+        android:name="net.qiujuer.tips.view.fragment.UserFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="0dp"
+        tools:layout="@layout/fragment_user" />
+</RelativeLayout>

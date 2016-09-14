@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_alpha_160"
+    tools:context=".view.activity.ShareActivity">
+
+    <ImageView
+        android:id="@+id/share_src"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:contentDescription="@string/txt_null" />
+
+    <LinearLayout
+        android:id="@+id/lay_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lay_8"
+        android:paddingLeft="@dimen/lay_40"
+        android:paddingRight="@dimen/lay_40"
+        android:paddingTop="@dimen/lay_8"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/share_wechat"
+            style="@style/dialog_content_share_text"
+            android:drawableTop="@drawable/share_icon_wechat_selector"
+            android:text="@string/txt_share_platform_wechat" />
+
+        <TextView
+            android:id="@+id/share_wechatfriends"
+            style="@style/dialog_content_share_text"
+            android:drawableTop="@drawable/share_icon_wechatfriends_selector"
+            android:text="@string/txt_share_platform_wechatfriends" />
+
+        <TextView
+            android:id="@+id/share_sina_weibo"
+            style="@style/dialog_content_share_text"
+            android:drawableTop="@drawable/share_icon_sinaweibo_selector"
+            android:text="@string/txt_share_platform_sina" />
+
+        <TextView
+            android:id="@+id/share_qq"
+            style="@style/dialog_content_share_text"
+            android:drawableTop="@drawable/share_icon_qq_selector"
+            android:text="@string/txt_share_platform_qq" />
+
+    </LinearLayout>
+
+</RelativeLayout>

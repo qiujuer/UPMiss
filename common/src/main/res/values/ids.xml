@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="calendar_view_select_year_Picker" type="id" />
+    <item name="calendar_view_select_month_Picker" type="id" />
+    <item name="calendar_view_select_day_Picker" type="id" />
+</resources>

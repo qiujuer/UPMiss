@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<net.qiujuer.tips.common.widget.TouchEffectLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/lay_16"
+    android:paddingRight="@dimen/lay_16"
+    tools:ignore="MissingPrefix">
+
+    <net.qiujuer.tips.common.widget.TimeLineMarker
+        android:id="@+id/item_time_line_view_color"
+        style="@style/IDefaultTimeLineStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/lay_8"
+        android:paddingLeft="@dimen/lay_4"
+        android:paddingRight="@dimen/lay_4"
+        android:paddingTop="@dimen/lay_44" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/lay_8"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_12"
+        android:paddingTop="@dimen/lay_12">
+
+        <ImageView
+            android:id="@+id/item_time_line_img_type"
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:contentDescription="@string/txt_null"
+            android:src="@mipmap/ic_icon_memorial" />
+
+        <TextView
+            android:id="@+id/item_time_line_txt_brief"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            fontPath="fonts/FZLanTingHeiS-DB1-GB-Regular.TTF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="@string/txt_null"
+            android:textColor="@color/grey_700"
+            android:textSize="@dimen/font_16" />
+
+        <TextView
+            android:id="@+id/item_time_line_txt_time_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_null"
+            android:textSize="@dimen/font_12" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_time_line_txt_time"
+        android:layout_width="@dimen/size_96"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginLeft="@dimen/lay_8"
+        android:layout_marginRight="@dimen/lay_8"
+        android:layout_marginTop="@dimen/lay_16"
+        android:gravity="center"
+        android:text="@string/txt_day"
+        android:textColor="@color/grey_600"
+        android:textSize="@dimen/font_12" />
+
+</net.qiujuer.tips.common.widget.TouchEffectLayout>

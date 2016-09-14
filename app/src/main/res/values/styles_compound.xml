@@ -1,0 +1,27 @@
+<resources>
+
+    <style name="Radio.Edit.Fill" parent="android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/ic_radio_edit_bg_fill</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">@dimen/activity_edit_item_width</item>
+        <item name="android:layout_height">@dimen/activity_edit_item_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+    </style>
+
+    <style name="Check.Set.Fill.Change" parent="android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:background">@drawable/ic_check_set_bg_fill</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">@dimen/activity_setting_item_width</item>
+        <item name="android:layout_height">@dimen/activity_setting_item_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+    </style>
+
+    <style name="Check.Round" parent="android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/ic_check_round_bg</item>
+        <item name="android:button">@null</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/cyan_700</item>
+    </style>
+</resources>

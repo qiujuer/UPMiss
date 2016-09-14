@@ -1,0 +1,10 @@
+<resources>
+    <attr name="TimeLineStyle" format="reference" />
+    <declare-styleable name="TimeLineMarker">
+        <attr name="markerSize" />
+        <attr name="marker" />
+        <attr name="beginLine" />
+        <attr name="endLine" />
+        <attr name="lineSize" />
+    </declare-styleable>
+</resources>

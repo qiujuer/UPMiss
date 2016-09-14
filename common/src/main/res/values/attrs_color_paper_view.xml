@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="ColorPaperView">
+        <attr name="iPaperColor" format="color" />
+    </declare-styleable>
+</resources>

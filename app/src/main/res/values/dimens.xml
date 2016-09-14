@@ -1,0 +1,20 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="status_bar_height">0dp</dimen>
+    <dimen name="blur_toolbar_top">@dimen/status_bar_height</dimen>
+    <dimen name="blur_content_top">@dimen/lay_32</dimen>
+
+    <dimen name="activity_edit_item_height">@dimen/size_48</dimen>
+    <dimen name="activity_edit_item_width">@dimen/size_72</dimen>
+    <dimen name="activity_setting_item_height">@dimen/size_48</dimen>
+    <dimen name="activity_setting_item_width">@dimen/size_72</dimen>
+    <dimen name="activity_setting_item_width_long">@dimen/size_156</dimen>
+
+    <dimen name="setting_dialog_remind">@dimen/size_48</dimen>
+
+    <dimen name="account_title_top">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

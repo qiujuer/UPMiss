@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.SearchKitActivity">
+
+    <LinearLayout
+        android:id="@id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_16">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_blur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+        <net.qiujuer.tips.common.widget.CalendarView
+            android:id="@+id/search_kit_calendar_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:iMainColor="@color/white" />
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/search_btn_commit"
+            android:layout_width="@dimen/size_172"
+            android:layout_height="@dimen/size_44"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/lay_16"
+            android:layout_marginTop="@dimen/lay_4"
+            android:background="@drawable/ic_btn_search_bg_alpha"
+            android:text="@string/txt_search_kit_submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_16"
+            app:gTouchColor="@color/white_alpha_64"
+            app:gTouchCornerRadius="0dp"
+            app:gTouchDurationRate="0.7" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/search_lay_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TextView
+                android:id="@+id/search_txt_show_sun"
+                style="@style/Text.Search.Kit" />
+
+            <TextView
+                android:id="@+id/search_txt_show_lunar"
+                style="@style/Text.Search.Kit" />
+
+            <TextView
+                android:id="@+id/search_txt_show_distance_now"
+                style="@style/Text.Search.Kit" />
+
+            <TextView
+                android:id="@+id/search_txt_show_week"
+                style="@style/Text.Search.Kit" />
+
+            <TextView
+                android:id="@+id/search_txt_show_constellation"
+                style="@style/Text.Search.Kit" />
+
+            <TextView
+                android:id="@+id/search_txt_show_zodiac"
+                style="@style/Text.Search.Kit" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

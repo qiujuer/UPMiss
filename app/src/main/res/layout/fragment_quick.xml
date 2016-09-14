@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.QuickFragment">
+
+    <LinearLayout
+        android:id="@+id/strip_lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cyan_500"
+        android:orientation="horizontal"
+        android:padding="@dimen/lay_16"
+        android:weightSum="3">
+
+        <include
+            android:id="@+id/include_lay_birthday"
+            layout="@layout/item_sta_pie_chart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/include_lay_memorial"
+            layout="@layout/item_sta_pie_chart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <include
+            android:id="@+id/include_lay_future"
+            layout="@layout/item_sta_pie_chart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <net.qiujuer.tips.common.widget.DragCircle
+        android:id="@+id/quick_drag"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

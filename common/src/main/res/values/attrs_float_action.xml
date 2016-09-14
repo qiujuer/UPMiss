@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="FloatAction">
+        <attr name="iFloatColor" format="color" />
+        <attr name="iFloatPressColor" format="color" />
+    </declare-styleable>
+</resources>

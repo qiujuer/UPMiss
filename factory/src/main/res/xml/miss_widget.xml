@@ -1,0 +1,7 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/layout_miss_widget"
+    android:minHeight="74dp"
+    android:minWidth="294dp"
+    android:previewImage="@mipmap/ic_widget_preview"
+    android:resizeMode="none"
+    android:updatePeriodMillis="0" />

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Image.Option.Round" parent="android:style/Widget.ImageWell">
+        <item name="android:background">@drawable/ic_bg_round_cyan</item>
+        <item name="android:layout_height">@dimen/size_48</item>
+        <item name="android:layout_width">@dimen/size_48</item>
+        <item name="android:layout_margin">@dimen/lay_8</item>
+        <item name="android:padding">@dimen/lay_12</item>
+    </style>
+
+    <style name="Image.Edit.Fill" parent="android:style/Widget.ImageWell">
+        <item name="android:background">@color/black_alpha_224</item>
+        <item name="android:layout_width">@dimen/activity_edit_item_height</item>
+        <item name="android:layout_height">@dimen/activity_edit_item_height</item>
+        <item name="android:padding">@dimen/lay_8</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+</resources>

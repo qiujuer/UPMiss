@@ -1,0 +1,54 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.qiujuer.tips.factory">
+
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 用于读取手机当前的状态-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application android:allowBackup="true">
+        <service
+            android:name="net.qiujuer.tips.factory.service.MissService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="1000"
+            android:process="net.qiujuer.tips.factory.service.MissService">
+            <intent-filter>
+                <action android:name="net.qiujuer.tips.factory.service.IMissServiceInterface" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="net.qiujuer.tips.factory.service.MissWidget"
+            android:permission="1000">
+            <intent-filter>
+                <action android:name="net.qiujuer.tips.factory.service.MissService.MISS_WIDGET" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="zyf.test.Send.MESSAGE.MYTEST" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/miss_widget" />
+        </receiver>
+
+        <service
+            android:name="net.qiujuer.tips.factory.service.MissWidgetService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_REMOTEVIEWS"
+            android:process="net.qiujuer.tips.factory.service.MissWidgetService" />
+
+        <!--receiver
+            android:name=".MissServiceAlarmReceiver"
+            android:process="net.qiujuer.tips.factory.service.AlarmReceiver" /-->
+
+        <service
+            android:name="net.qiujuer.tips.factory.service.MissAlarmService"
+            android:process="net.qiujuer.tips.factory.service.MissAlarmService" />
+    </application>
+</manifest>

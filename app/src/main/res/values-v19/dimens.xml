@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="status_bar_height">25dp</dimen>
+    <dimen name="account_title_top">41dp</dimen>
+</resources>

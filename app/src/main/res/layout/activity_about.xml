@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.qiujuer.tips.view.activity.AboutActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue_500"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_16">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_blur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_8"
+            android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+        <ImageView
+            android:id="@+id/launch_icon"
+            android:layout_width="@dimen/size_172"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/txt_null"
+            android:src="@mipmap/ic_launcher_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/lay_16"
+            android:text="一款记录您重要日子的软件；您的时间秘书~~"
+            android:textColor="@color/white_alpha_240"
+            android:textSize="@dimen/font_14" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lay_top"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_32"
+        android:paddingLeft="@dimen/lay_16"
+        android:paddingRight="@dimen/lay_16"
+        android:paddingTop="@dimen/lay_32">
+
+        <net.qiujuer.genius.ui.widget.TextView
+            style="@style/Text.About.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_about_version" />
+
+        <net.qiujuer.genius.ui.widget.TextView
+            style="@style/Text.About.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_about_email" />
+
+        <net.qiujuer.genius.ui.widget.TextView
+            style="@style/Text.About.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_about_group" />
+
+        <net.qiujuer.genius.ui.widget.TextView
+            style="@style/Text.About.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_about_alipay" />
+
+        <net.qiujuer.genius.ui.widget.TextView
+            style="@style/Text.About.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_about_wechat" />
+    </LinearLayout>
+
+    <net.qiujuer.genius.ui.widget.FloatActionButton
+        android:id="@+id/btn_github"
+        android:layout_width="@dimen/size_44"
+        android:layout_height="@dimen/size_44"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lay_top"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/lay_16"
+        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginTop="-22dp"
+        android:padding="@dimen/lay_8"
+        android:src="@mipmap/ic_github"
+        app:gBackgroundColor="@color/light_blue_500" />
+</RelativeLayout>

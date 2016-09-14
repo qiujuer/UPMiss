@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_float_background"
+    android:orientation="vertical"
+    tools:context=".view.activity.ContactAddActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/anim_in_list_slide_alpha_bottom_long"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/lay_32"
+        android:paddingRight="@dimen/lay_32"
+        android:paddingTop="@dimen/blur_content_top">
+
+        <LinearLayout
+            android:id="@+id/contacts_lay_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_user_name" />
+
+            <EditText
+                android:id="@+id/contacts_edit_name"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:singleLine="true"
+                android:textColor="@color/cyan_700"
+                android:textSize="@dimen/font_16" />
+
+            <Button
+                android:id="@+id/contacts_quick_add"
+                style="@style/Button.Transparent"
+                android:layout_width="@dimen/activity_edit_item_height"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_margin="0dp"
+                android:paddingBottom="@dimen/lay_2"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:paddingTop="@dimen/lay_2"
+                android:text="@string/txt_quick_add" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_lay_phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_contacts_phone" />
+
+            <EditText
+                android:id="@+id/contacts_edit_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="0dp"
+                android:inputType="phone"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:singleLine="true"
+                android:textColor="@color/cyan_700"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_lay_QQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_contacts_QQ" />
+
+            <EditText
+                android:id="@+id/contacts_edit_QQ"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="@dimen/lay_48"
+                android:layout_marginTop="0dp"
+                android:inputType="number"
+                android:maxLength="20"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:singleLine="true"
+                android:textColor="@color/cyan_700"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_lay_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_user_sex" />
+
+            <RadioGroup
+                android:id="@+id/contacts_radio_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/contacts_radio_gender_man"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/contacts_radio_gender_man"
+                    style="@style/Radio.Edit.Fill"
+                    android:text="@string/contacts_gender_man" />
+
+                <RadioButton
+                    android:id="@+id/contacts_radio_gender_woman"
+                    style="@style/Radio.Edit.Fill"
+                    android:text="@string/contacts_gender_woman" />
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/contacts_lay_relation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_contacts_relation" />
+
+            <TextView
+                android:id="@+id/contacts_txt_relation"
+                style="@style/Text.Background.Blue.Fill"
+                android:layout_width="@dimen/activity_edit_item_width"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:background="@drawable/ic_txt_bg_fill_cyan"
+                android:clickable="true"
+                android:minHeight="@dimen/size_48" />
+        </LinearLayout>
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_36"
+            android:layout_marginTop="@dimen/lay_32"
+            android:background="@color/purple_500"
+            android:paddingBottom="0dp"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="0dp"
+            android:text="@string/btn_user_save"
+            android:textColor="@color/white_alpha_224"
+            app:gTouchCornerRadius="0dp"
+            app:gTouchEffect="ripple" />
+
+    </LinearLayout>
+
+</LinearLayout>

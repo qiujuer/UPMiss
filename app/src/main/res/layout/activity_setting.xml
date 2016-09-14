@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_float_background"
+    android:orientation="vertical"
+    tools:context=".view.activity.SettingActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_blur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginTop="@dimen/blur_toolbar_top" />
+
+    <LinearLayout
+        android:id="@+id/lay_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/lay_32"
+        android:paddingRight="@dimen/lay_32"
+        android:paddingTop="@dimen/lay_32">
+
+        <LinearLayout
+            android:id="@+id/set_lay_remind_day_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/blur_content_top">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_set_alert" />
+
+            <TextView
+                android:id="@+id/set_txt_days_remind"
+                style="@style/Text.Background.Blue.Fill"
+                android:layout_width="@dimen/activity_setting_item_width"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/set_lay_colour_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_set_color" />
+
+            <TextView
+                android:id="@+id/set_txt_color_start"
+                android:layout_width="@dimen/activity_setting_item_width"
+                android:layout_height="@dimen/activity_setting_item_height"
+                android:background="@color/orange_500"
+                android:gravity="center"
+                android:text="@string/txt_set_start"
+                android:textColor="@color/white_alpha_224" />
+
+            <TextView
+                android:id="@+id/set_txt_color_end"
+                android:layout_width="@dimen/activity_setting_item_width"
+                android:layout_height="@dimen/activity_setting_item_height"
+                android:background="@color/red_500"
+                android:gravity="center"
+                android:text="@string/txt_set_end"
+                android:textColor="@color/white_alpha_224" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/set_lay_way_add_show_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_add_show_way_widget" />
+
+            <Button
+                android:id="@+id/set_lay_way_add_widget"
+                style="@style/Text.Background.Blue.Fill"
+                android:gravity="center"
+                android:minWidth="@dimen/size_116"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:text="@string/btn_add_widget_way" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_add_show_way_float_frame"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/set_lay_way_add_float"
+                style="@style/Text.Background.Blue.Fill"
+                android:gravity="center"
+                android:minWidth="@dimen/size_116"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:text="@string/btn_add_float_frame_way" />
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/Button.Background.Purple.Fill"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_32"
+            android:layout_marginTop="@dimen/lay_32"
+            android:text="@string/btn_user_save" />
+
+    </LinearLayout>
+</LinearLayout>

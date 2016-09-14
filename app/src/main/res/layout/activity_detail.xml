@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_alpha_16"
+    tools:context=".view.activity.RecordDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_alpha_96"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_16"
+        android:paddingTop="@dimen/status_bar_height">
+
+        <TextView
+            android:id="@+id/txt_brief"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:layout_marginBottom="@dimen/lay_8"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:shadowColor="@color/black_alpha_96"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text="@string/txt_null"
+            android:textColor="@color/white_alpha_240"
+            android:textSize="@dimen/font_20" />
+
+        <TextView
+            android:id="@+id/txt_year_month"
+            style="@style/Text.Detail.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/black_alpha_16"
+            android:paddingBottom="@dimen/lay_4"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_4"
+            android:text="@string/txt_null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black_alpha_16"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_8"
+            android:weightSum="7">
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SUN" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="MON" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TUE" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="WED" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="THU" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="FRI" />
+
+            <TextView
+                style="@style/Text.Detail.Sub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SAT" />
+
+        </LinearLayout>
+
+        <net.qiujuer.tips.common.widget.SimpleDateView
+            android:id="@+id/simple_date"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_52"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_8" />
+
+        <TextView
+            android:id="@+id/txt_lunar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_8"
+            android:text="@string/txt_null"
+            android:textColor="@color/white_alpha_192"
+            android:textSize="@dimen/font_14" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_date"
+        android:layout_width="@dimen/size_224"
+        android:layout_height="@dimen/size_224"
+        android:layout_below="@+id/lay_top"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/lay_64"
+        android:gravity="center"
+        android:textColor="@color/grey_700"
+        android:textSize="@dimen/font_56"
+        android:visibility="invisible"
+        tools:background="@mipmap/ic_badge_birthday"
+        tools:text="@string/txt_null" />
+
+    <HorizontalScrollView
+        android:id="@+id/lay_scroll_operation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white_alpha_192"
+        android:scrollbars="none"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_8">
+
+            <net.qiujuer.genius.ui.widget.ImageView
+                android:id="@+id/detail_btn_share"
+                style="@style/Image.Option.Round"
+                android:contentDescription="@string/txt_null"
+                android:src="@drawable/ic_op_share"
+                android:text="@string/txt_o_share"
+                app:gTouchCornerRadius="@dimen/size_24"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.ImageView
+                android:id="@+id/detail_btn_save"
+                style="@style/Image.Option.Round"
+                android:contentDescription="@string/txt_null"
+                android:src="@drawable/ic_op_save"
+                android:text="@string/txt_o_save"
+                app:gTouchCornerRadius="@dimen/size_24"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.ImageView
+                android:id="@+id/detail_btn_edit"
+                style="@style/Image.Option.Round"
+                android:contentDescription="@string/txt_null"
+                android:src="@drawable/ic_op_edit"
+                android:text="@string/txt_o_edit"
+                app:gTouchCornerRadius="@dimen/size_24"
+                app:gTouchEffect="ripple" />
+
+            <net.qiujuer.genius.ui.widget.ImageView
+                android:id="@+id/detail_btn_delete"
+                style="@style/Image.Option.Round"
+                android:contentDescription="@string/txt_null"
+                android:src="@drawable/ic_op_delete"
+                android:text="@string/txt_o_delete"
+                app:gTouchCornerRadius="@dimen/size_24"
+                app:gTouchEffect="ripple" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</RelativeLayout>

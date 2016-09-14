@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="dialog.remind.days" parent="android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:background">@drawable/ic_setting_dialog_remind</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_width">@dimen/setting_dialog_remind</item>
+        <item name="android:layout_height">@dimen/setting_dialog_remind</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/lay_4</item>
+        <item name="android:textColor">@color/white_alpha_224</item>
+    </style>
+</resources>

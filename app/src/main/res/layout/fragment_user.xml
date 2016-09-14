@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/lay_32"
+    android:paddingRight="@dimen/lay_32"
+    tools:context=".view.fragment.UserFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/lay_16">
+
+        <ImageView
+            android:id="@+id/img_user_code"
+            android:layout_width="@dimen/size_96"
+            android:layout_height="@dimen/size_96"
+            android:background="@color/black_alpha_224"
+            android:contentDescription="@string/txt_null"
+            android:padding="2dp"
+            android:src="@color/cyan_500" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/lay_8"
+            android:paddingRight="@dimen/lay_8">
+
+            <TextView
+                android:id="@+id/txt_user_flow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txt_user_code" />
+
+            <LinearLayout
+
+                android:id="@+id/set_lay_remind_day_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/Text.Set.Background.Fill.Black"
+                    android:text="@string/txt_user_account" />
+
+                <TextView
+                    android:id="@+id/txt_user_account"
+                    style="@style/Text.Background.Blue.Fill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/size_48"
+                    android:text="00000000000\nexample@xx.xx" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/interval_flow"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="@dimen/lay_16"
+        android:layout_marginTop="@dimen/lay_16"
+        android:background="@drawable/ic_interval_bg_v_r" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layoutAnimation="@anim/anim_in_list_slide_alpha_bottom_long"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/set_lay_colour_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_user_name" />
+
+            <EditText
+                android:id="@+id/edit_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_edit_item_height"
+                android:layout_marginBottom="0dp"
+                android:layout_marginRight="@dimen/lay_32"
+                android:layout_marginTop="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:inputType="text"
+                android:maxLength="10"
+                android:paddingLeft="@dimen/lay_8"
+                android:paddingRight="@dimen/lay_8"
+                android:singleLine="true"
+                android:textColor="@color/cyan_700"
+                android:textSize="@dimen/font_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/edit_lay_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_user_sex" />
+
+            <RadioGroup
+                android:id="@+id/radio_user_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkedButton="@+id/radio_user_sex_man"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_user_sex_man"
+                    style="@style/Radio.Edit.Fill"
+                    android:tag="1"
+                    android:text="@string/radio_user_sex_man" />
+
+                <RadioButton
+                    android:id="@+id/radio_user_sex_woman"
+                    style="@style/Radio.Edit.Fill"
+                    android:tag="2"
+                    android:text="@string/radio_user_sex_woman" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/set_lay_birthday_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_type_birthday" />
+
+            <CheckBox
+                android:id="@+id/check_user_date_way"
+                style="@style/Check.Set.Fill.Change"
+                android:checked="true"
+                android:text="@string/txt_date_lunar" />
+
+            <TextView
+                android:id="@+id/txt_user_birthday"
+                style="@style/Text.Background.Blue.Fill"
+                android:text="@string/txt_date_null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Text.Set.Background.Fill.Black"
+                android:text="@string/txt_user_color" />
+
+            <Button
+                android:id="@+id/btn_user_color"
+                style="@style/Text.Background.Blue.Fill"
+                android:text="@string/btn_user_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_save"
+            style="@style/Button.Background.Purple.Fill"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_32"
+            android:layout_marginTop="@dimen/lay_32"
+            android:text="@string/btn_user_save" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,139 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_200"
+    android:orientation="vertical"
+    tools:context=".view.activity.AccountActivity">
+
+    <TextView
+        android:id="@+id/account_txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/deep_purple_500"
+        android:paddingBottom="@dimen/lay_16"
+        android:paddingLeft="@dimen/lay_16"
+        android:paddingRight="@dimen/lay_16"
+        android:paddingTop="@dimen/account_title_top"
+        android:text="@string/txt_title_login"
+        android:textColor="@color/white_alpha_224"
+        android:textSize="@dimen/font_20" />
+
+    <ViewAnimator
+        android:id="@+id/account_output"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@color/deep_purple_500"
+        android:paddingBottom="@dimen/lay_16"
+        android:paddingLeft="@dimen/lay_16"
+        android:paddingRight="@dimen/lay_16"
+        android:paddingTop="@dimen/lay_16">
+
+        <LinearLayout
+            android:id="@+id/account_lay_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.qiujuer.genius.ui.widget.EditText
+                android:id="@+id/account_edit_login_email"
+                style="@style/EditText.Account"
+                android:digits=".0123456789qwertyuiopasdfghjklzxcvbnm@"
+                android:hint="@string/txt_email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/color_edit_account_hint" />
+
+            <net.qiujuer.genius.ui.widget.EditText
+                android:id="@+id/account_edit_login_password"
+                style="@style/EditText.Account"
+                android:hint="@string/txt_password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/color_edit_account_hint" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/account_lay_register"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <net.qiujuer.genius.ui.widget.EditText
+                android:id="@+id/account_edit_register_email"
+                style="@style/EditText.Account"
+                android:digits=".0123456789qwertyuiopasdfghjklzxcvbnm@"
+                android:hint="@string/txt_email"
+                android:inputType="textEmailAddress"
+                android:textColorHint="@color/color_edit_account_hint" />
+
+            <net.qiujuer.genius.ui.widget.EditText
+                android:id="@+id/account_edit_register_password"
+                style="@style/EditText.Account"
+                android:hint="@string/txt_password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/color_edit_account_hint" />
+
+            <net.qiujuer.genius.ui.widget.EditText
+                android:id="@+id/account_edit_register_password_confirm"
+                style="@style/EditText.Account"
+                android:hint="@string/txt_password_confirm"
+                android:inputType="textPassword"
+                android:textColorHint="@color/color_edit_account_hint" />
+
+        </LinearLayout>
+    </ViewAnimator>
+
+    <LinearLayout
+        android:id="@+id/account_toLogin_link"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/lay_16"
+        android:paddingRight="@dimen/lay_16">
+
+        <TextView
+            android:id="@+id/account_txt_whether"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_not_have_account"
+            android:textColor="@color/grey_500"
+            android:textSize="@dimen/font_14" />
+
+        <Button
+            android:id="@+id/account_btn_change"
+            style="@style/Button.Transparent"
+            android:layout_width="@dimen/lay_48"
+            android:text="@string/txt_not_have_account_btn" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_48"
+        android:layout_marginBottom="@dimen/lay_32"
+        android:layout_marginLeft="@dimen/lay_16"
+        android:layout_marginRight="@dimen/lay_16">
+
+        <net.qiujuer.genius.ui.widget.Button
+            android:id="@+id/account_btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_btn_account_submit_bg"
+            android:text="@string/txt_go"
+            android:textColor="@color/white_alpha_224"
+            android:textSize="@dimen/font_16"
+            app:gTouchCornerRadius="2dp"
+            app:gTouchEffect="ripple" />
+
+        <net.qiujuer.genius.ui.widget.Loading
+            android:id="@+id/loading"
+            android:layout_width="@dimen/size_32"
+            android:layout_height="@dimen/size_32"
+            android:layout_gravity="center"
+            app:gAutoRun="false"
+            app:gBackgroundColor="@null"
+            app:gForegroundColor="@color/white" />
+    </FrameLayout>
+</LinearLayout>

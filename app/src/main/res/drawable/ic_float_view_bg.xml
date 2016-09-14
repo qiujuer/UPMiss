@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <gradient android:endColor="@color/trans" android:gradientRadius="50" android:startColor="@color/black" android:type="radial" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12">
+                <shape android:shape="oval">
+                    <padding android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12" />
+                    <solid android:color="@color/orange_500" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <gradient android:endColor="@color/trans" android:gradientRadius="50" android:startColor="@color/black" android:type="radial" />
+                </shape>
+            </item>
+            <item android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12">
+                <shape android:shape="oval">
+                    <padding android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12" />
+                    <solid android:color="@color/cyan_500" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

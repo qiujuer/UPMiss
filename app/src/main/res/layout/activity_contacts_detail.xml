@@ -1,0 +1,118 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".view.activity.ContactDetailActivity">
+
+    <LinearLayout
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_alpha_96"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/lay_36"
+        android:paddingTop="@dimen/status_bar_height">
+
+        <TextView
+            android:id="@+id/contacts_detail_txt_brief_name"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/abc_action_bar_default_height_material"
+            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_20"/>
+
+        <TextView
+            android:id="@+id/contacts_detail_txt_phone"
+            style="@style/Text.Detail.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_4"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/contacts_detail_txt_QQ"
+            style="@style/Text.Detail.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_4"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/contacts_detail_txt_relation"
+            style="@style/Text.Detail.Sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="@dimen/lay_8"
+            android:paddingLeft="@dimen/lay_16"
+            android:paddingRight="@dimen/lay_16"
+            android:paddingTop="@dimen/lay_4"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/lay_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lay_top"
+        android:layout_marginTop="@dimen/lay_4"
+        android:paddingTop="@dimen/lay_8">
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:paddingBottom="@dimen/lay_16"
+            android:text="@string/txt_null_data"
+            android:textSize="@dimen/font_16"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_records"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:fadeScrollbars="true"
+            android:fadingEdge="none"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:overScrollMode="never"
+            android:scrollbarSize="2dp"
+            android:scrollbarThumbVertical="@color/cyan_500"
+            android:scrollbars="vertical"/>
+
+
+    </FrameLayout>
+
+    <net.qiujuer.genius.ui.widget.FloatActionButton
+        android:id="@+id/contacts_Detail_btn_to_edit"
+        android:layout_width="@dimen/size_56"
+        android:layout_height="@dimen/size_56"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/lay_16"
+        android:layout_marginRight="@dimen/lay_16"
+        android:contentDescription="@string/txt_null"
+        android:padding="@dimen/lay_16"
+        android:src="@drawable/ic_op_edit"
+        app:gBackgroundColor="@color/cyan_500"
+        app:gTouchColor="@color/cyan_700"
+        tools:ignore="RtlHardcoded"/>
+</RelativeLayout>

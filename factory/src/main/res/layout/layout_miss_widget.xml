@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/food_list"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_blue_500"
+        android:orientation="horizontal"
+        android:padding="@dimen/lay_16">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white_alpha_240"
+            android:textSize="@dimen/font_18" />
+
+        <Button
+            android:layout_width="@dimen/size_24"
+            android:layout_height="@dimen/size_24"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/btn_start_activity"
+            android:background="@drawable/ic_text_add"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_miss_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="false"
+        android:divider="@color/grey_300"
+        android:dividerHeight="1px"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:paddingLeft="@dimen/lay_8"
+        android:paddingRight="@dimen/lay_8"
+        android:paddingBottom="@dimen/lay_8"
+        android:scrollbars="none" />
+
+</LinearLayout>

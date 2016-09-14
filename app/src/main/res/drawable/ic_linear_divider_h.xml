@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <size
+        android:width="@dimen/lay_4"
+        android:height="@dimen/lay_4" />
+</shape>
