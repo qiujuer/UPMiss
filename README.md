@@ -5,8 +5,8 @@ UPMiss is birthday management software.
 
 
 # Website
-[`UPMiss Site Link`](http://www.qiujuer.net/works/Show/9)
-
+[`Site Link`](http://www.qiujuer.net/works/Show/9)
+[`Api Link`](http://upmiss.qiujuer.net/help)
 
 # Dependencies
 
