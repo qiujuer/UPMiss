@@ -24,7 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+	/*
     signingConfigs {
         all {
             storeFile file(RELEASE_STORE_FILE)
@@ -33,6 +33,7 @@ android {
             keyPassword RELEASE_KEY_PASSWORD
         }
     }
+    */
 }
 
 repositories {
