@@ -18,7 +18,7 @@ UPMiss is birthday management software.
 
 
 # Screenshot
-![branchs](https://raw.githubusercontent.com/qiujuer/Genius-Android/master/caprice/release/branchs.png)
+![shot](https://raw.githubusercontent.com/qiujuer/UPMiss/master/arts/shot.png)
 
 
 ## Feedback
