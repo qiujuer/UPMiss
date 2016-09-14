@@ -2,9 +2,11 @@
 UPMiss open source, use MVP. UPMiss is birthday management software.
 
 
-# Website
+# Links
 [`Site Link`](http://www.qiujuer.net/works/Show/9)
 [`Api Link`](http://upmiss.qiujuer.net/help)
+[`App Link`](https://github.com/qiujuer/UPMiss/releases)
+
 
 # Dependencies
 
