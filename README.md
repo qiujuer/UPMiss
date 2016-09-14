@@ -1,7 +1,5 @@
 # UPMiss
-UPMiss open source, use MVP.
-
-UPMiss is birthday management software.
+UPMiss open source, use MVP. UPMiss is birthday management software.
 
 
 # Website
