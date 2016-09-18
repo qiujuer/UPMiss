@@ -24,7 +24,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-	/*
+    /*
     signingConfigs {
         all {
             storeFile file(RELEASE_STORE_FILE)
@@ -47,13 +47,13 @@ dependencies {
 
     compile project(':common')
     compile project(':factory')
-    compile 'com.android.support:support-v4:24.2.0'
-    compile 'com.android.support:support-v13:24.2.0'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.android.support:recyclerview-v7:24.2.0'
-    compile 'net.qiujuer.genius:graphics:2.0.0-beta8'
-    compile 'net.qiujuer.genius:res:2.0.0-beta8'
-    compile 'net.qiujuer.genius:kit-handler:2.0.0-beta8'
-    compile 'net.qiujuer.genius:ui:2.0.0-beta8'
-    compile 'uk.co.chrisjenx:calligraphy:2.2.0'
+    compile "com.android.support:support-v4:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:support-v13:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+    compile "net.qiujuer.genius:graphics:$rootProject.ext.geniusVersion"
+    compile "net.qiujuer.genius:res:$rootProject.ext.geniusVersion"
+    compile "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
+    compile "net.qiujuer.genius:ui:$rootProject.ext.geniusVersion"
+    compile "uk.co.chrisjenx:calligraphy:$rootProject.ext.calligraphyVersion"
 }

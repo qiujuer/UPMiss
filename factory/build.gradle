@@ -22,22 +22,22 @@ android {
     }
 }
 
-def dbflow_version = "3.0.1"
+
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
+    testCompile "junit:junit:$rootProject.ext.junitVersion"
 
-    compile 'com.google.code.gson:gson:2.7'
-    compile 'net.qiujuer.genius:kit-handler:2.0.0-beta8'
-    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    compile "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
+    compile "com.mcxiaoke.volley:library:$rootProject.ext.volleyVersion"
 
-    apt "com.github.Raizlabs.DBFlow:dbflow-processor:${dbflow_version}"
+    apt "com.github.Raizlabs.DBFlow:dbflow-processor:$rootProject.ext.dbflowVersion"
     // use kapt for kotlin apt
-    compile "com.github.Raizlabs.DBFlow:dbflow-core:${dbflow_version}"
-    compile "com.github.Raizlabs.DBFlow:dbflow:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflowVersion"
+    compile "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
 
     // sql-cipher database encyrption (optional)
-    compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:${dbflow_version}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:$rootProject.ext.dbflowVersion"
 
     compile project(':common')
     compile project(':open')
