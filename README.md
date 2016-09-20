@@ -2,23 +2,31 @@
 UPMiss open source, use MVP. UPMiss is birthday management software.
 
 
-# Links
+## Links
 [`Site Link`](http://www.qiujuer.net/works/Show/9)
 [`Api Link`](http://upmiss.qiujuer.net/help)
 [`App Link`](https://github.com/qiujuer/UPMiss/releases)
 
 
-# Dependencies
+## Dependencies
 
-* Ui and Cross-Thread: [`Genius-Android`](https://github.com/qiujuer/Genius-Android)
+* Ui, Thread-Cross: [`Genius-Android`](https://github.com/qiujuer/Genius-Android)
 * Font Manager: [`Calligraphy`](https://github.com/chrisjenx/Calligraphy)
 * JSON: [`Gson`](https://github.com/google/gson)
 * HTTP: [`Volley`](https://github.com/mcxiaoke/android-volley)
 * Database: [`DBFlow`](https://github.com/Raizlabs/DBFlow)
 
 
-# Screenshot
-![shot](https://raw.githubusercontent.com/qiujuer/UPMiss/master/arts/shot.png)
+## Dev
+
+* Android-Studio: 2.2 version
+* SDK: 24.0.2 version
+
+You can change sdk version in `root/gradle.properties` # `ANDROID_BUILD` values.
+
+
+## Screenshot
+![Screenshot](https://raw.githubusercontent.com/qiujuer/UPMiss/master/arts/shot.png)
 
 
 ## Feedback
