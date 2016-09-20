@@ -20,9 +20,9 @@ UPMiss open source, use MVP. UPMiss is birthday management software.
 ## Dev
 
 * Android-Studio: 2.2 version
-* SDK: 24.0.2 version
+* SDK Tool: 24.0.2 version
 
-You can change sdk version in `root/gradle.properties` # `ANDROID_BUILD` values.
+You can change sdk tool version in `root/gradle.properties` # `ANDROID_BUILD` values.
 
 
 ## Screenshot
