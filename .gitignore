@@ -20,7 +20,6 @@ out/
 .DS_Store
 /build
 /captures
-/gradle
 .externalNativeBuild
 
 # Local configuration file (sdk path, etc)
