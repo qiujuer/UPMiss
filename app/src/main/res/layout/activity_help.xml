@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_32"
+        android:paddingBottom="@dimen/len_32"
         android:paddingTop="@dimen/status_bar_height">
 
         <TextView
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:padding="@dimen/lay_16"
+            android:padding="@dimen/len_16"
             android:text="@string/txt_how_add_show_way"
             android:textColor="@color/cyan_500"
             android:textSize="@dimen/font_24" />
@@ -37,8 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/lay_8"
-            android:paddingTop="@dimen/lay_16">
+            android:paddingBottom="@dimen/len_8"
+            android:paddingTop="@dimen/len_16">
 
             <TextView
                 android:layout_width="0dp"
@@ -46,7 +46,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="@dimen/lay_8"
+                android:padding="@dimen/len_8"
                 android:text="@string/txt_add_widget_first"
                 android:textColor="@color/grey_700" />
 
@@ -61,8 +61,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingBottom="@dimen/lay_16"
-            android:paddingTop="@dimen/lay_8">
+            android:paddingBottom="@dimen/len_16"
+            android:paddingTop="@dimen/len_8">
 
             <ImageView
                 android:layout_width="180dp"
@@ -76,7 +76,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:padding="@dimen/lay_8"
+                android:padding="@dimen/len_8"
                 android:text="@string/txt_add_widget_second"
                 android:textColor="@color/grey_700" />
         </LinearLayout>

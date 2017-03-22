@@ -3,20 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingLeft="@dimen/lay_32"
-    android:paddingRight="@dimen/lay_32"
+    android:paddingLeft="@dimen/len_32"
+    android:paddingRight="@dimen/len_32"
     tools:context=".view.fragment.UserFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:paddingTop="@dimen/lay_16">
+        android:paddingTop="@dimen/len_16">
 
         <ImageView
             android:id="@+id/img_user_code"
-            android:layout_width="@dimen/size_96"
-            android:layout_height="@dimen/size_96"
+            android:layout_width="@dimen/len_96"
+            android:layout_height="@dimen/len_96"
             android:background="@color/black_alpha_224"
             android:contentDescription="@string/txt_null"
             android:padding="2dp"
@@ -27,8 +27,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:orientation="vertical"
-            android:paddingLeft="@dimen/lay_8"
-            android:paddingRight="@dimen/lay_8">
+            android:paddingLeft="@dimen/len_8"
+            android:paddingRight="@dimen/len_8">
 
             <TextView
                 android:id="@+id/txt_user_flow"
@@ -52,7 +52,7 @@
                     style="@style/Text.Background.Blue.Fill"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="@dimen/size_48"
+                    android:minHeight="@dimen/len_48"
                     android:text="00000000000\nexample@xx.xx" />
             </LinearLayout>
         </LinearLayout>
@@ -63,8 +63,8 @@
         android:id="@+id/interval_flow"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:layout_marginBottom="@dimen/lay_16"
-        android:layout_marginTop="@dimen/lay_16"
+        android:layout_marginBottom="@dimen/len_16"
+        android:layout_marginTop="@dimen/len_16"
         android:background="@drawable/ic_interval_bg_v_r" />
 
     <LinearLayout
@@ -77,7 +77,7 @@
             android:id="@+id/set_lay_colour_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -89,14 +89,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/activity_edit_item_height"
                 android:layout_marginBottom="0dp"
-                android:layout_marginRight="@dimen/lay_32"
+                android:layout_marginRight="@dimen/len_32"
                 android:layout_marginTop="0dp"
                 android:focusable="true"
                 android:focusableInTouchMode="true"
                 android:inputType="text"
                 android:maxLength="10"
-                android:paddingLeft="@dimen/lay_8"
-                android:paddingRight="@dimen/lay_8"
+                android:paddingLeft="@dimen/len_8"
+                android:paddingRight="@dimen/len_8"
                 android:singleLine="true"
                 android:textColor="@color/cyan_700"
                 android:textSize="@dimen/font_16" />
@@ -106,7 +106,7 @@
             android:id="@+id/edit_lay_type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -139,7 +139,7 @@
             android:id="@+id/set_lay_birthday_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -161,7 +161,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -178,8 +178,8 @@
             android:id="@+id/btn_save"
             style="@style/Button.Background.Purple.Fill"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_32"
-            android:layout_marginTop="@dimen/lay_32"
+            android:layout_height="@dimen/len_32"
+            android:layout_marginTop="@dimen/len_32"
             android:text="@string/btn_user_save" />
     </LinearLayout>
 </LinearLayout>

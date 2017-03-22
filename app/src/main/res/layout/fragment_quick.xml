@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/cyan_500"
         android:orientation="horizontal"
-        android:padding="@dimen/lay_16"
+        android:padding="@dimen/len_16"
         android:weightSum="3">
 
         <include

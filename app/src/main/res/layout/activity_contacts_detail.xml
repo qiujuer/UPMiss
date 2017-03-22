@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="@color/black_alpha_96"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_36"
+        android:paddingBottom="@dimen/len_36"
         android:paddingTop="@dimen/status_bar_height">
 
         <TextView
@@ -19,11 +19,11 @@
             style="@style/Base.TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/abc_action_bar_default_height_material"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingLeft="@dimen/lay_16"
-            android:paddingRight="@dimen/lay_16"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingRight="@dimen/len_16"
             android:shadowDy="1"
             android:shadowRadius="5"
             android:textColor="@color/white"
@@ -35,10 +35,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="@dimen/lay_8"
-            android:paddingLeft="@dimen/lay_16"
-            android:paddingRight="@dimen/lay_16"
-            android:paddingTop="@dimen/lay_4"
+            android:paddingBottom="@dimen/len_8"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingRight="@dimen/len_16"
+            android:paddingTop="@dimen/len_4"
             android:textColor="@color/white"/>
 
         <TextView
@@ -47,10 +47,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="@dimen/lay_8"
-            android:paddingLeft="@dimen/lay_16"
-            android:paddingRight="@dimen/lay_16"
-            android:paddingTop="@dimen/lay_4"
+            android:paddingBottom="@dimen/len_8"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingRight="@dimen/len_16"
+            android:paddingTop="@dimen/len_4"
             android:textColor="@color/white"/>
 
         <TextView
@@ -59,10 +59,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="@dimen/lay_8"
-            android:paddingLeft="@dimen/lay_16"
-            android:paddingRight="@dimen/lay_16"
-            android:paddingTop="@dimen/lay_4"
+            android:paddingBottom="@dimen/len_8"
+            android:paddingLeft="@dimen/len_16"
+            android:paddingRight="@dimen/len_16"
+            android:paddingTop="@dimen/len_4"
             android:textColor="@color/white"/>
     </LinearLayout>
 
@@ -71,8 +71,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/lay_top"
-        android:layout_marginTop="@dimen/lay_4"
-        android:paddingTop="@dimen/lay_8">
+        android:layout_marginTop="@dimen/len_4"
+        android:paddingTop="@dimen/len_8">
 
         <TextView
             android:id="@+id/text_status"
@@ -80,7 +80,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:paddingBottom="@dimen/lay_16"
+            android:paddingBottom="@dimen/len_16"
             android:text="@string/txt_null_data"
             android:textSize="@dimen/font_16"/>
 
@@ -103,14 +103,14 @@
 
     <net.qiujuer.genius.ui.widget.FloatActionButton
         android:id="@+id/contacts_Detail_btn_to_edit"
-        android:layout_width="@dimen/size_56"
-        android:layout_height="@dimen/size_56"
+        android:layout_width="@dimen/len_56"
+        android:layout_height="@dimen/len_56"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="@dimen/lay_16"
-        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginBottom="@dimen/len_16"
+        android:layout_marginRight="@dimen/len_16"
         android:contentDescription="@string/txt_null"
-        android:padding="@dimen/lay_16"
+        android:padding="@dimen/len_16"
         android:src="@drawable/ic_op_edit"
         app:gBackgroundColor="@color/cyan_500"
         app:gTouchColor="@color/cyan_700"

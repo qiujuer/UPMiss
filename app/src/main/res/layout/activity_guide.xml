@@ -17,58 +17,58 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/guide_btn_skip"
-        android:layout_marginBottom="@dimen/lay_24"
+        android:layout_marginBottom="@dimen/len_24"
         android:gravity="center"
         android:orientation="horizontal">
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill_all" />
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill" />
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill" />
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill" />
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill" />
 
         <View
-            android:layout_width="@dimen/lay_4"
-            android:layout_height="@dimen/lay_4"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_width="@dimen/len_4"
+            android:layout_height="@dimen/len_4"
+            android:layout_margin="@dimen/len_4"
             android:background="@drawable/ic_guide_view_bg_fill" />
     </LinearLayout>
 
     <net.qiujuer.genius.ui.widget.Button
         android:id="@+id/guide_btn_skip"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_36"
+        android:layout_height="@dimen/len_36"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/lay_24"
+        android:layout_marginBottom="@dimen/len_24"
         android:background="@color/purple_500"
         android:paddingBottom="0dp"
-        android:paddingLeft="@dimen/lay_16"
-        android:paddingRight="@dimen/lay_16"
+        android:paddingLeft="@dimen/len_16"
+        android:paddingRight="@dimen/len_16"
         android:paddingTop="0dp"
         android:text="@string/btn_guide_skip"
         android:textColor="@color/white_alpha_224"

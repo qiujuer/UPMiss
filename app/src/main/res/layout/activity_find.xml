@@ -9,7 +9,7 @@
         layout="@layout/toolbar_blur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginBottom="@dimen/len_8"
         android:layout_marginTop="@dimen/blur_toolbar_top" />
 
     <LinearLayout
@@ -18,9 +18,9 @@
         android:layout_below="@+id/toolbar"
         android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_32"
-        android:paddingLeft="@dimen/lay_32"
-        android:paddingRight="@dimen/lay_32">
+        android:paddingBottom="@dimen/len_32"
+        android:paddingLeft="@dimen/len_32"
+        android:paddingRight="@dimen/len_32">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_gif"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16"
+                android:layout_margin="@dimen/len_16"
                 android:text="@string/txt_find_gift" />
 
             <include layout="@layout/include_find_interval_h" />
@@ -39,7 +39,7 @@
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_wish"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16"
+                android:layout_margin="@dimen/len_16"
                 android:text="@string/txt_find_wish" />
         </LinearLayout>
 
@@ -54,14 +54,14 @@
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_richScan"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16" />
+                android:layout_margin="@dimen/len_16" />
 
             <include layout="@layout/include_find_interval_h" />
 
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_search_kit"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16"
+                android:layout_margin="@dimen/len_16"
                 android:text="@string/txt_find_day" />
         </LinearLayout>
 
@@ -76,14 +76,14 @@
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_ads"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16" />
+                android:layout_margin="@dimen/len_16" />
 
             <include layout="@layout/include_find_interval_h" />
 
             <net.qiujuer.tips.common.widget.IntervalButton
                 android:id="@+id/btn_find_user"
                 style="@style/Text.Find.Title"
-                android:layout_margin="@dimen/lay_16"
+                android:layout_margin="@dimen/len_16"
                 android:text="@string/txt_find_account" />
         </LinearLayout>
     </LinearLayout>

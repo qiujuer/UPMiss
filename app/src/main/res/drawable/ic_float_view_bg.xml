@@ -7,9 +7,9 @@
                     <gradient android:endColor="@color/trans" android:gradientRadius="50" android:startColor="@color/black" android:type="radial" />
                 </shape>
             </item>
-            <item android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12">
+            <item android:bottom="@dimen/len_12" android:left="@dimen/len_12" android:right="@dimen/len_12" android:top="@dimen/len_12">
                 <shape android:shape="oval">
-                    <padding android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12" />
+                    <padding android:bottom="@dimen/len_12" android:left="@dimen/len_12" android:right="@dimen/len_12" android:top="@dimen/len_12" />
                     <solid android:color="@color/orange_500" />
                 </shape>
             </item>
@@ -22,9 +22,9 @@
                     <gradient android:endColor="@color/trans" android:gradientRadius="50" android:startColor="@color/black" android:type="radial" />
                 </shape>
             </item>
-            <item android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12">
+            <item android:bottom="@dimen/len_12" android:left="@dimen/len_12" android:right="@dimen/len_12" android:top="@dimen/len_12">
                 <shape android:shape="oval">
-                    <padding android:bottom="@dimen/lay_12" android:left="@dimen/lay_12" android:right="@dimen/lay_12" android:top="@dimen/lay_12" />
+                    <padding android:bottom="@dimen/len_12" android:left="@dimen/len_12" android:right="@dimen/len_12" android:top="@dimen/len_12" />
                     <solid android:color="@color/cyan_500" />
                 </shape>
             </item>

@@ -2,10 +2,10 @@
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/size_44"
+    android:layout_width="@dimen/len_44"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/lay_4"
-    android:paddingTop="@dimen/lay_4">
+    android:paddingBottom="@dimen/len_4"
+    android:paddingTop="@dimen/len_4">
 
     <net.qiujuer.genius.ui.widget.ImageView
         android:id="@+id/iv_action_share"
@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:contentDescription="@string/app_name"
-        android:paddingLeft="@dimen/lay_8"
-        android:paddingRight="@dimen/lay_8"
+        android:paddingLeft="@dimen/len_8"
+        android:paddingRight="@dimen/len_8"
         android:src="@mipmap/ic_action_share"
         app:gTouchCornerRadius="14dp"
         app:gTouchEffect="ripple" />
@@ -24,8 +24,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:paddingLeft="@dimen/lay_8"
-        android:paddingRight="@dimen/lay_8"
+        android:paddingLeft="@dimen/len_8"
+        android:paddingRight="@dimen/len_8"
         app:gAutoRun="false"
         app:gBackgroundColor="@color/trans"
         app:gForegroundColor="@color/white_alpha_224"

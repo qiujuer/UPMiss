@@ -3,12 +3,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    android:padding="@dimen/lay_8">
+    android:padding="@dimen/len_8">
 
     <TextView
         android:id="@+id/txt_color_circle"
-        android:layout_width="@dimen/size_12"
-        android:layout_height="@dimen/size_12"
+        android:layout_width="@dimen/len_12"
+        android:layout_height="@dimen/len_12"
         android:layout_centerVertical="true"
         android:alpha="0.75"
         android:background="@color/cyan_500" />
@@ -18,8 +18,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginLeft="@dimen/lay_16"
-        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginLeft="@dimen/len_16"
+        android:layout_marginRight="@dimen/len_16"
         android:layout_toRightOf="@id/txt_color_circle"
         android:text="@string/miss_widget_list_item_day"
         android:textColor="@color/black_alpha_224"
@@ -31,10 +31,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
-        android:layout_marginBottom="@dimen/lay_4"
-        android:layout_marginLeft="@dimen/lay_8"
-        android:layout_marginRight="@dimen/lay_8"
-        android:layout_marginTop="@dimen/lay_4"
+        android:layout_marginBottom="@dimen/len_4"
+        android:layout_marginLeft="@dimen/len_8"
+        android:layout_marginRight="@dimen/len_8"
+        android:layout_marginTop="@dimen/len_4"
         android:gravity="center"
         android:text="@string/miss_widget_list_item_day"
         android:textColor="@color/cyan_700"

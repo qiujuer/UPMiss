@@ -9,7 +9,7 @@
         layout="@layout/toolbar_blur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginBottom="@dimen/len_8"
         android:layout_marginTop="@dimen/blur_toolbar_top" />
 
     <fragment

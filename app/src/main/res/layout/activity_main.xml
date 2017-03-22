@@ -26,12 +26,12 @@
 
     <net.qiujuer.tips.common.widget.FloatAction
         android:id="@+id/main_img_create"
-        android:layout_width="@dimen/size_56"
-        android:layout_height="@dimen/size_56"
+        android:layout_width="@dimen/len_56"
+        android:layout_height="@dimen/len_56"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_marginBottom="@dimen/lay_16"
-        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginBottom="@dimen/len_16"
+        android:layout_marginRight="@dimen/len_16"
         android:contentDescription="@string/txt_null"
         app:iFloatColor="@color/cyan_500"
         app:iFloatPressColor="@color/cyan_700"

@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingLeft="@dimen/lay_16"
-    android:paddingRight="@dimen/lay_16"
+    android:paddingLeft="@dimen/len_16"
+    android:paddingRight="@dimen/len_16"
     tools:ignore="MissingPrefix">
 
     <net.qiujuer.tips.common.widget.TimeLineMarker
@@ -14,25 +14,25 @@
         style="@style/IDefaultTimeLineStyle"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:paddingBottom="@dimen/lay_8"
-        android:paddingLeft="@dimen/lay_4"
-        android:paddingRight="@dimen/lay_4"
-        android:paddingTop="@dimen/lay_44" />
+        android:paddingBottom="@dimen/len_8"
+        android:paddingLeft="@dimen/len_4"
+        android:paddingRight="@dimen/len_4"
+        android:paddingTop="@dimen/len_44" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/lay_8"
+        android:layout_margin="@dimen/len_8"
         android:layout_weight="1"
         android:gravity="center_vertical"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_12"
-        android:paddingTop="@dimen/lay_12">
+        android:paddingBottom="@dimen/len_12"
+        android:paddingTop="@dimen/len_12">
 
         <ImageView
             android:id="@+id/item_time_line_img_type"
-            android:layout_width="@dimen/size_24"
-            android:layout_height="@dimen/size_24"
+            android:layout_width="@dimen/len_24"
+            android:layout_height="@dimen/len_24"
             android:contentDescription="@string/txt_null"
             android:src="@mipmap/ic_icon_memorial" />
 
@@ -59,13 +59,13 @@
 
     <TextView
         android:id="@+id/item_time_line_txt_time"
-        android:layout_width="@dimen/size_96"
+        android:layout_width="@dimen/len_96"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/lay_8"
-        android:layout_marginLeft="@dimen/lay_8"
-        android:layout_marginRight="@dimen/lay_8"
-        android:layout_marginTop="@dimen/lay_16"
+        android:layout_marginBottom="@dimen/len_8"
+        android:layout_marginLeft="@dimen/len_8"
+        android:layout_marginRight="@dimen/len_8"
+        android:layout_marginTop="@dimen/len_16"
         android:gravity="center"
         android:text="@string/txt_day"
         android:textColor="@color/grey_600"

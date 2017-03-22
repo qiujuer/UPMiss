@@ -4,17 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingBottom="@dimen/lay_32"
-    android:paddingLeft="@dimen/lay_16"
-    android:paddingRight="@dimen/lay_16"
-    android:paddingTop="@dimen/lay_32">
+    android:paddingBottom="@dimen/len_32"
+    android:paddingLeft="@dimen/len_16"
+    android:paddingRight="@dimen/len_16"
+    android:paddingTop="@dimen/len_32">
 
     <net.qiujuer.tips.common.widget.ColorPaperView
         android:id="@+id/color_item_container"
-        android:layout_width="@dimen/size_116"
-        android:layout_height="@dimen/size_48"
+        android:layout_width="@dimen/len_116"
+        android:layout_height="@dimen/len_48"
         android:layout_gravity="center"
-        android:layout_marginBottom="@dimen/lay_40"
+        android:layout_marginBottom="@dimen/len_40"
         android:gravity="center"
         android:text="@string/txt_dialog_color_select"
         android:textColor="@color/white_alpha_224"
@@ -29,40 +29,40 @@
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_red"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/red_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_pink"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/pink_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_purple"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/purple_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_deep_purple"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/deep_purple_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_indigo"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/indigo_500" />
     </LinearLayout>
@@ -76,40 +76,40 @@
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_blue"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/blue_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_light_blue"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/light_blue_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_cyan"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/cyan_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_teal"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/teal_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_green"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/green_500" />
     </LinearLayout>
@@ -123,40 +123,40 @@
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_deep_light_green"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/light_green_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_lime"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/lime_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_yellow"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/yellow_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_amber"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/amber_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_orange"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/orange_500" />
     </LinearLayout>
@@ -170,40 +170,40 @@
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_deep_orange"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/deep_orange_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_brown"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/brown_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_grey"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/grey_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_blue_grey"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/blue_grey_500" />
 
         <net.qiujuer.tips.common.widget.ColorView
             android:id="@+id/color_item_black"
             android:layout_width="0dp"
-            android:layout_height="@dimen/lay_48"
-            android:layout_margin="@dimen/lay_4"
+            android:layout_height="@dimen/len_48"
+            android:layout_margin="@dimen/len_4"
             android:layout_weight="1"
             app:iColor="@color/black" />
     </LinearLayout>

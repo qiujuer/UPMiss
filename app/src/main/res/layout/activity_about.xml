@@ -13,19 +13,19 @@
         android:layout_height="wrap_content"
         android:background="@color/light_blue_500"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_16">
+        android:paddingBottom="@dimen/len_16">
 
         <include
             android:id="@+id/toolbar"
             layout="@layout/toolbar_blur"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_8"
+            android:layout_marginBottom="@dimen/len_8"
             android:layout_marginTop="@dimen/blur_toolbar_top" />
 
         <ImageView
             android:id="@+id/launch_icon"
-            android:layout_width="@dimen/size_172"
+            android:layout_width="@dimen/len_172"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:contentDescription="@string/txt_null"
@@ -35,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="@dimen/lay_16"
+            android:layout_margin="@dimen/len_16"
             android:text="一款记录您重要日子的软件；您的时间秘书~~"
             android:textColor="@color/white_alpha_240"
             android:textSize="@dimen/font_14" />
@@ -48,10 +48,10 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/lay_top"
         android:orientation="vertical"
-        android:paddingBottom="@dimen/lay_32"
-        android:paddingLeft="@dimen/lay_16"
-        android:paddingRight="@dimen/lay_16"
-        android:paddingTop="@dimen/lay_32">
+        android:paddingBottom="@dimen/len_32"
+        android:paddingLeft="@dimen/len_16"
+        android:paddingRight="@dimen/len_16"
+        android:paddingTop="@dimen/len_32">
 
         <net.qiujuer.genius.ui.widget.TextView
             style="@style/Text.About.Sub"
@@ -86,15 +86,15 @@
 
     <net.qiujuer.genius.ui.widget.FloatActionButton
         android:id="@+id/btn_github"
-        android:layout_width="@dimen/size_44"
-        android:layout_height="@dimen/size_44"
+        android:layout_width="@dimen/len_44"
+        android:layout_height="@dimen/len_44"
         android:layout_alignParentRight="true"
         android:layout_below="@+id/lay_top"
         android:layout_gravity="right"
-        android:layout_marginLeft="@dimen/lay_16"
-        android:layout_marginRight="@dimen/lay_16"
+        android:layout_marginLeft="@dimen/len_16"
+        android:layout_marginRight="@dimen/len_16"
         android:layout_marginTop="-22dp"
-        android:padding="@dimen/lay_8"
+        android:padding="@dimen/len_8"
         android:src="@mipmap/ic_github"
         app:gBackgroundColor="@color/light_blue_500" />
 </RelativeLayout>

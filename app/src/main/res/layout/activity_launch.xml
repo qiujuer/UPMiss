@@ -12,7 +12,7 @@
 
     <ImageView
         android:id="@+id/launch_icon"
-        android:layout_width="@dimen/size_172"
+        android:layout_width="@dimen/len_172"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:contentDescription="@string/txt_null"

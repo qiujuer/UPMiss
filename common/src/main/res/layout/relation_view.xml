@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:checkedButton="@+id/relation_radioGroup_gender_man"
         android:orientation="horizontal"
-        android:padding="@dimen/lay_8">
+        android:padding="@dimen/len_8">
 
         <RadioButton
             android:id="@+id/relation_radioGroup_gender_man"

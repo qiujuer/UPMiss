@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:background="@color/light_blue_500"
         android:orientation="horizontal"
-        android:padding="@dimen/lay_16">
+        android:padding="@dimen/len_16">
 
         <TextView
             android:layout_width="0dp"
@@ -21,8 +21,8 @@
             android:textSize="@dimen/font_18" />
 
         <Button
-            android:layout_width="@dimen/size_24"
-            android:layout_height="@dimen/size_24"
+            android:layout_width="@dimen/len_24"
+            android:layout_height="@dimen/len_24"
             android:layout_gravity="center_vertical"
             android:id="@+id/btn_start_activity"
             android:background="@drawable/ic_text_add"
@@ -39,9 +39,9 @@
         android:dividerHeight="1px"
         android:footerDividersEnabled="false"
         android:headerDividersEnabled="false"
-        android:paddingLeft="@dimen/lay_8"
-        android:paddingRight="@dimen/lay_8"
-        android:paddingBottom="@dimen/lay_8"
+        android:paddingLeft="@dimen/len_8"
+        android:paddingRight="@dimen/len_8"
+        android:paddingBottom="@dimen/len_8"
         android:scrollbars="none" />
 
 </LinearLayout>

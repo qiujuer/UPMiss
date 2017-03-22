@@ -4,27 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingLeft="@dimen/lay_16"
-    android:paddingRight="@dimen/lay_16">
+    android:paddingLeft="@dimen/len_16"
+    android:paddingRight="@dimen/len_16">
 
 
     <net.qiujuer.tips.common.widget.YearMarker
         android:id="@+id/item_sta_marker_year"
         style="@style/IDefaultYearStyle"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_64"
+        android:layout_height="@dimen/len_64"
         android:gravity="center"
-        android:paddingBottom="@dimen/lay_20"
-        android:paddingLeft="@dimen/lay_4"
-        android:paddingRight="@dimen/lay_4"
-        android:paddingTop="@dimen/lay_20"
+        android:paddingBottom="@dimen/len_20"
+        android:paddingLeft="@dimen/len_4"
+        android:paddingRight="@dimen/len_4"
+        android:paddingTop="@dimen/len_20"
         android:text="@string/txt_null"
         android:textColor="@color/grey_500" />
 
     <net.qiujuer.tips.common.widget.TackinessView
         android:id="@+id/item_sta_tackiness"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/size_64"
+        android:layout_height="@dimen/len_64"
         android:layout_gravity="center_vertical" />
 
 

@@ -6,7 +6,7 @@
     <View
         android:layout_width="0.5dp"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/lay_48"
-        android:layout_marginTop="@dimen/lay_48"
+        android:layout_marginBottom="@dimen/len_48"
+        android:layout_marginTop="@dimen/len_48"
         android:background="@drawable/ic_interval_bg_h" />
 </merge>

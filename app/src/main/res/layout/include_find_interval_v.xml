@@ -7,16 +7,16 @@
     <View
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginLeft="@dimen/lay_48"
-        android:layout_marginRight="@dimen/lay_48"
+        android:layout_marginLeft="@dimen/len_48"
+        android:layout_marginRight="@dimen/len_48"
         android:layout_weight="1"
         android:background="@drawable/ic_interval_bg_v" />
 
     <View
         android:layout_width="0dp"
         android:layout_height="0.5dp"
-        android:layout_marginLeft="@dimen/lay_48"
-        android:layout_marginRight="@dimen/lay_48"
+        android:layout_marginLeft="@dimen/len_48"
+        android:layout_marginRight="@dimen/len_48"
         android:layout_weight="1"
         android:background="@drawable/ic_interval_bg_v" />
 </LinearLayout>

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
-            android:padding="@dimen/lay_4"
+            android:padding="@dimen/len_4"
             android:text="@string/txt_update_title"
             android:textSize="@dimen/font_14" />
 
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#35cdcdcd"
-            android:padding="@dimen/lay_8"
+            android:padding="@dimen/len_8"
             android:textColor="#96000000"
             android:textSize="@dimen/font_14" />
     </LinearLayout>

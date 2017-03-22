@@ -99,7 +99,7 @@ public class BackgroundActivity extends AppCompatActivity {
         Bitmap bitmap = Bitmap.createBitmap(src, 0, 0,
                 src.getWidth(), src.getHeight(), matrix, true);
 
-        bitmap = Blur.onStackBlurPixels(bitmap, BLUR_LEVEL, true);
+        bitmap = Blur.onStackBlur(bitmap, BLUR_LEVEL);
         synchronized (mBlurBitmapLock) {
             mBlurBitmap = bitmap;
             mBlurBitmapLock.notifyAll();
@@ -142,7 +142,7 @@ public class BackgroundActivity extends AppCompatActivity {
         mBlurBitmap = null;
         synchronized (mBlurBitmapLock) {
             Bitmap bitmap = formatBlurBitmap(activity, true);
-            mBlurBitmap = Blur.onStackBlurPixels(bitmap, BLUR_LEVEL, true);
+            mBlurBitmap = Blur.onStackBlur(bitmap, BLUR_LEVEL);
             mBlurBitmapLock.notifyAll();
         }
     }

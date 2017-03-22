@@ -3,12 +3,12 @@
     <style name="EditText.Account" parent="@style/Genius.Widget.EditText">
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:paddingLeft">@dimen/lay_8</item>
-        <item name="android:paddingRight">@dimen/lay_8</item>
-        <item name="android:layout_marginLeft">@dimen/lay_8</item>
-        <item name="android:layout_marginRight">@dimen/lay_8</item>
-        <item name="android:layout_marginBottom">@dimen/lay_16</item>
-        <item name="android:layout_marginTop">@dimen/lay_8</item>
+        <item name="android:paddingLeft">@dimen/len_8</item>
+        <item name="android:paddingRight">@dimen/len_8</item>
+        <item name="android:layout_marginLeft">@dimen/len_8</item>
+        <item name="android:layout_marginRight">@dimen/len_8</item>
+        <item name="android:layout_marginBottom">@dimen/len_16</item>
+        <item name="android:layout_marginTop">@dimen/len_8</item>
         <item name="android:paddingTop">4dp</item>
         <item name="android:paddingBottom">4dp</item>
         <item name="android:textSize">@dimen/font_16</item>

@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/dialog_date_select_txt_date"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/lay_64"
+        android:layout_height="@dimen/len_64"
         android:textColor="@color/cyan_700"
         android:textSize="@dimen/font_20"
         android:gravity="center" />

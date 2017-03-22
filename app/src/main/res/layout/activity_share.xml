@@ -18,10 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:paddingBottom="@dimen/lay_8"
-        android:paddingLeft="@dimen/lay_40"
-        android:paddingRight="@dimen/lay_40"
-        android:paddingTop="@dimen/lay_8"
+        android:paddingBottom="@dimen/len_8"
+        android:paddingLeft="@dimen/len_40"
+        android:paddingRight="@dimen/len_40"
+        android:paddingTop="@dimen/len_8"
         android:visibility="invisible">
 
         <TextView

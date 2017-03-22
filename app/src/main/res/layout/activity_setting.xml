@@ -11,7 +11,7 @@
         layout="@layout/toolbar_blur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/lay_8"
+        android:layout_marginBottom="@dimen/len_8"
         android:layout_marginTop="@dimen/blur_toolbar_top" />
 
     <LinearLayout
@@ -19,15 +19,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:paddingLeft="@dimen/lay_32"
-        android:paddingRight="@dimen/lay_32"
-        android:paddingTop="@dimen/lay_32">
+        android:paddingLeft="@dimen/len_32"
+        android:paddingRight="@dimen/len_32"
+        android:paddingTop="@dimen/len_32">
 
         <LinearLayout
             android:id="@+id/set_lay_remind_day_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal"
             android:paddingTop="@dimen/blur_content_top">
 
@@ -47,7 +47,7 @@
             android:id="@+id/set_lay_colour_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -77,7 +77,7 @@
             android:id="@+id/set_lay_way_add_show_link"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -88,16 +88,16 @@
                 android:id="@+id/set_lay_way_add_widget"
                 style="@style/Text.Background.Blue.Fill"
                 android:gravity="center"
-                android:minWidth="@dimen/size_116"
-                android:paddingLeft="@dimen/lay_8"
-                android:paddingRight="@dimen/lay_8"
+                android:minWidth="@dimen/len_116"
+                android:paddingLeft="@dimen/len_8"
+                android:paddingRight="@dimen/len_8"
                 android:text="@string/btn_add_widget_way" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/lay_4"
+            android:layout_marginBottom="@dimen/len_4"
             android:orientation="horizontal">
 
             <TextView
@@ -109,9 +109,9 @@
                 android:id="@+id/set_lay_way_add_float"
                 style="@style/Text.Background.Blue.Fill"
                 android:gravity="center"
-                android:minWidth="@dimen/size_116"
-                android:paddingLeft="@dimen/lay_8"
-                android:paddingRight="@dimen/lay_8"
+                android:minWidth="@dimen/len_116"
+                android:paddingLeft="@dimen/len_8"
+                android:paddingRight="@dimen/len_8"
                 android:text="@string/btn_add_float_frame_way" />
         </LinearLayout>
 
@@ -120,8 +120,8 @@
             android:id="@+id/btn_save"
             style="@style/Button.Background.Purple.Fill"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/size_32"
-            android:layout_marginTop="@dimen/lay_32"
+            android:layout_height="@dimen/len_32"
+            android:layout_marginTop="@dimen/len_32"
             android:text="@string/btn_user_save" />
 
     </LinearLayout>

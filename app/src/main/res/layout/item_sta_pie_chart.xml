@@ -4,22 +4,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:paddingLeft="@dimen/lay_8"
-    android:paddingRight="@dimen/lay_8">
+    android:paddingLeft="@dimen/len_8"
+    android:paddingRight="@dimen/len_8">
 
     <net.qiujuer.tips.common.widget.PieChart
         android:id="@+id/item_sta_pie_chart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/lay_4"
-        android:layout_marginRight="@dimen/lay_4"
-        android:maxHeight="@dimen/size_96"
-        android:maxWidth="@dimen/size_96"
-        android:padding="@dimen/lay_28"
+        android:layout_marginLeft="@dimen/len_4"
+        android:layout_marginRight="@dimen/len_4"
+        android:maxHeight="@dimen/len_96"
+        android:maxWidth="@dimen/len_96"
+        android:padding="@dimen/len_28"
         android:src="@mipmap/ic_icon_memorial"
         app:iRingForeColor="@color/white_alpha_224"
-        app:iRingSize="@dimen/lay_4" />
+        app:iRingSize="@dimen/len_4" />
 
     <TextView
         android:id="@+id/item_sta_txt"
