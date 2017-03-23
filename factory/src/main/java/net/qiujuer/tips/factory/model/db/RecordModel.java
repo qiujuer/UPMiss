@@ -20,6 +20,7 @@ package net.qiujuer.tips.factory.model.db;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.raizlabs.android.dbflow.annotation.Column;
+import com.raizlabs.android.dbflow.annotation.ColumnIgnore;
 import com.raizlabs.android.dbflow.annotation.ForeignKey;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
@@ -84,8 +85,7 @@ public class RecordModel extends BaseModel implements ModelStatus {
     @Column(name = "Last")
     private Date last;
 
-    @ForeignKey()
-    //@ForeignKeyReference(columnName = "Contact", columnType = , foreignKeyColumnName = )
+    @ForeignKey(tableClass = ContactModel.class, stubbedRelationship = true)
     private ContactModel contact;
 
     @Expose
@@ -97,6 +97,7 @@ public class RecordModel extends BaseModel implements ModelStatus {
     private long changedTime;
 
     @Expose
+    @ColumnIgnore
     private transient TipsCalender mDate;
 
     public long getId() {

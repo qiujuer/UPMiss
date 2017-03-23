@@ -11,7 +11,6 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-
         maven { url "https://jitpack.io" }
     }
 }
@@ -21,9 +20,9 @@ ext {
     // App dependencies
     supportLibraryVersion = '25.3.0'
     junitVersion = '4.12'
-    dbflowVersion = '3.0.1'
+    dbflowVersion = '4.0.0-beta5'
     geniusVersion = '2.0.0'
-    gsonVersion = '2.7'
+    gsonVersion = '2.8.0'
     volleyVersion = '1.0.19'
     calligraphyVersion = '2.2.0'
 }

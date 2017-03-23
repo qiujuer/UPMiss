@@ -2,12 +2,12 @@ package net.qiujuer.tips;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
+import net.qiujuer.genius.kit.handler.Run;
 import net.qiujuer.tips.factory.presenter.AppPresenter;
 import net.qiujuer.tips.view.activity.BaseActivity;
 import net.qiujuer.tips.view.activity.GuideActivity;
@@ -16,8 +16,8 @@ import net.qiujuer.tips.view.util.AnimationListener;
 
 
 public class LaunchActivity extends BaseActivity {
-
-    private final Handler mHandler = new Handler();
+    private int mDoneCount = 0;
+    private boolean mAlreadySkip = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +31,7 @@ public class LaunchActivity extends BaseActivity {
             public void run() {
                 Application application = (Application) getApplication();
                 application.init();
-
-                mHandler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        skip();
-                    }
-                }, 3200);
+                skipOnDone();
             }
         };
         thread.setDaemon(true);
@@ -47,7 +41,7 @@ public class LaunchActivity extends BaseActivity {
     private void iconIn() {
         Animation anim = AnimationUtils.loadAnimation(this,
                 R.anim.anim_launch_item_fade_in);
-        anim.setStartOffset(560);
+        anim.setStartOffset(480);
         anim.setAnimationListener(new AnimationListener() {
             @Override
             public void onAnimationEnd(Animation animation) {
@@ -55,6 +49,12 @@ public class LaunchActivity extends BaseActivity {
 
                 Animation anim = AnimationUtils.loadAnimation(LaunchActivity.this,
                         R.anim.anim_launch_item_scale_in);
+                anim.setAnimationListener(new AnimationListener() {
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        skipOnDone();
+                    }
+                });
                 View view = findViewById(R.id.launch_icon);
                 view.setVisibility(View.VISIBLE);
                 view.startAnimation(anim);
@@ -63,7 +63,22 @@ public class LaunchActivity extends BaseActivity {
         findViewById(R.id.content).startAnimation(anim);
     }
 
-    private void skip() {
+    private void skipOnDone() {
+        if (mAlreadySkip || ((++mDoneCount) < 2))
+            return;
+
+        mAlreadySkip = true;
+
+        Run.getUiHandler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                skipByDelay();
+            }
+        }, 1000);
+
+    }
+
+    private void skipByDelay() {
         Intent intent;
         if (AppPresenter.isFirstUse()) {
             Toast.makeText(this, R.string.app_welcome, Toast.LENGTH_LONG).show();
@@ -71,7 +86,6 @@ public class LaunchActivity extends BaseActivity {
         } else {
             intent = new Intent(this, MainActivity.class);
         }
-        /*intent = new Intent(this, GuideActivity.class);*/
         startActivity(intent);
         finish();
     }

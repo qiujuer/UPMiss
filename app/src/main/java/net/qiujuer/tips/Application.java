@@ -2,11 +2,10 @@ package net.qiujuer.tips;
 
 
 import android.app.Activity;
-import android.content.Intent;
 
 import net.qiujuer.tips.factory.cache.Cache;
+import net.qiujuer.tips.factory.model.Model;
 import net.qiujuer.tips.factory.presenter.AppPresenter;
-import net.qiujuer.tips.factory.service.MissService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,22 +19,24 @@ public class Application extends android.app.Application {
     public void onCreate() {
         super.onCreate();
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                        .setDefaultFontPath("fonts/FZLanTingHeiS-L-GB-Regular.TTF")
-                        .setFontAttrId(R.attr.fontPath)
-                        .build()
+                .setDefaultFontPath("fonts/FZLanTingHeiS-L-GB-Regular.TTF")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
         );
+
+        Model.setApplication(this);
     }
 
     public void init() {
-        Intent serviceIntent = new Intent(this, MissService.class);
-        this.startService(serviceIntent);
-
         AppPresenter.setApplication(this);
         Cache.init();
     }
 
     public void dispose() {
         AppPresenter.dispose();
+
+        // Model
+        Model.dispose();
     }
 
     public void addActivity(Activity activity) {

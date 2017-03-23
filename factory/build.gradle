@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
     compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
@@ -31,13 +30,9 @@ dependencies {
     compile "net.qiujuer.genius:kit-handler:$rootProject.ext.geniusVersion"
     compile "com.mcxiaoke.volley:library:$rootProject.ext.volleyVersion"
 
-    apt "com.github.Raizlabs.DBFlow:dbflow-processor:$rootProject.ext.dbflowVersion"
-    // use kapt for kotlin apt
-    compile "com.github.Raizlabs.DBFlow:dbflow-core:$rootProject.ext.dbflowVersion"
-    compile "com.github.Raizlabs.DBFlow:dbflow:$rootProject.ext.dbflowVersion"
-
-    // sql-cipher database encyrption (optional)
-    compile "com.github.Raizlabs.DBFlow:dbflow-sqlcipher:$rootProject.ext.dbflowVersion"
+    annotationProcessor "com.github.Raizlabs.DBFlow:dbflow-processor:${rootProject.ext.dbflowVersion}"
+    compile "com.github.Raizlabs.DBFlow:dbflow-core:${rootProject.ext.dbflowVersion}"
+    compile "com.github.Raizlabs.DBFlow:dbflow:${rootProject.ext.dbflowVersion}"
 
     compile project(':common')
     compile project(':open')

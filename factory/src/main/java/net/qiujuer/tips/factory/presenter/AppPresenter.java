@@ -40,17 +40,14 @@ public class AppPresenter {
     };
 
     public static void setApplication(Application application) {
-        Model.setApplication(application);
-
+        Intent serviceIntent = new Intent(application, MissService.class);
+        application.startService(serviceIntent);
         bindService();
     }
 
     public static void dispose() {
         // Service
         unBindService();
-
-        // Model
-        Model.dispose();
     }
 
     private static void bindService() {

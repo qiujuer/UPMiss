@@ -22,6 +22,7 @@ public class RecordEditPresenter {
             mView.setDate(mModel.getDateCalender());
             mView.setColor(mModel.getColor());
             if (mModel.getContact() != null) {
+                mModel.getContact().load();
                 mView.setContactName(mModel.getContact().getName());
             }
             return true;

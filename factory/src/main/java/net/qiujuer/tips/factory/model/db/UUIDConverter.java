@@ -9,7 +9,6 @@ import java.util.UUID;
  * Created by JuQiu
  * on 16/6/25.
  */
-@com.raizlabs.android.dbflow.annotation.TypeConverter
 public class UUIDConverter extends TypeConverter<String, UUID> {
 
     @Override

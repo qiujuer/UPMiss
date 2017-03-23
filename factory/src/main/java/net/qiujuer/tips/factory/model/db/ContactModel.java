@@ -18,7 +18,7 @@ package net.qiujuer.tips.factory.model.db;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import com.raizlabs.android.dbflow.annotation.Column;
-import com.raizlabs.android.dbflow.annotation.ModelContainer;
+import com.raizlabs.android.dbflow.annotation.OneToMany;
 import com.raizlabs.android.dbflow.annotation.PrimaryKey;
 import com.raizlabs.android.dbflow.annotation.Table;
 import com.raizlabs.android.dbflow.sql.language.SQLite;
@@ -30,7 +30,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
-@ModelContainer
 @Table(database = AppDatabase.class, name = "Contact")
 public class ContactModel extends BaseModel implements ModelStatus {
     public final static int GENDER_MAN = 1;
@@ -247,13 +246,13 @@ public class ContactModel extends BaseModel implements ModelStatus {
     }
 
 
-    //@OneToMany(methods = {OneToMany.Method.ALL}, variableName = "recordModels")
+    @OneToMany(methods = {OneToMany.Method.ALL}, variableName = "recordModels")
     public List<RecordModel> records() {
         // get recordModels is this.Id
         if (recordModels == null || recordModels.isEmpty()) {
             recordModels = SQLite.select()
                     .from(RecordModel.class)
-                    .where(RecordModel_Table.contact_Id.is(id))
+                    .where(RecordModel_Table.contact_Id.eq(id))
                     .and(RecordModel_Table.Status.isNot(STATUS_DELETE))
                     .queryList();
         }

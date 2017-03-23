@@ -37,7 +37,9 @@ public class Model {
 
             APPLICATION = application;
             // DB Flow init
-            FlowManager.init(new FlowConfig.Builder(APPLICATION).build());
+            FlowManager.init(new FlowConfig.Builder(application)
+                    .openDatabasesOnInit(true)
+                    .build());
 
             stopRequestQueue();
             REQUEST_QUEUE = Volley.newRequestQueue(APPLICATION);
