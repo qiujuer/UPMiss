@@ -27,7 +27,7 @@
     <string name="title_activity_contacts_edit">Edit Contacts</string>
     <string name="title_activity_contacts_detail">Contacts</string>
 
-    <string name="title_dialog_relation">TA\'s relationship with you</string>
+    <string name="title_dialog_relation">Relationship with TA</string>
     <string name="title_select_color">Color</string>
     <string name="title_select_date">Date</string>
 

@@ -3,14 +3,17 @@
 
     <style name="View.Relation.Fill" parent="android:style/Widget.CompoundButton.RadioButton">
         <item name="android:background">@drawable/ic_relation_rdo_btn_bg_fill</item>
-        <item name="android:layout_width">@dimen/len_48</item>
-        <item name="android:layout_height">@dimen/len_48</item>
-        <item name="android:layout_marginRight">@dimen/len_8</item>
-        <item name="android:layout_marginLeft">@dimen/len_8</item>
-        <item name="android:layout_marginTop">@dimen/len_4</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:minWidth">@dimen/len_48</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">@dimen/len_24</item>
+        <item name="android:padding">@dimen/len_4</item>
+        <item name="android:layout_marginRight">@dimen/len_4</item>
+        <item name="android:layout_marginLeft">@dimen/len_4</item>
+        <item name="android:layout_marginTop">@dimen/len_6</item>
         <item name="android:gravity">center</item>
         <item name="android:button">@null</item>
-        <item name="android:textColor">#e0ffffff</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
 </resources>
