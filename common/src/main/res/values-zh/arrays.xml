@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="array_contacts_relations">
+        <item>未知</item>
+
+        <item>老婆</item>
+        <item>妹妹</item>
+        <item>女友</item>
+        <item>母亲</item>
+        <item>女儿</item>
+        <item>姐姐</item>
+
+        <item>老公</item>
+        <item>弟弟</item>
+        <item>男友</item>
+        <item>父亲</item>
+        <item>儿子</item>
+        <item>哥哥</item>
+
+        <item>死党</item>
+        <item>朋友</item>
+
+        <item>同学</item>
+        <item>长辈</item>
+        <item>同辈</item>
+        <item>晚辈</item>
+
+        <item>老师</item>
+        <item>同事</item>
+        <item>客户</item>
+        <item>领导</item>
+    </array>
+    <array name="calendar_Sun_month">
+        <item>1月</item>
+        <item>2月</item>
+        <item>3月</item>
+        <item>4月</item>
+        <item>5月</item>
+        <item>6月</item>
+        <item>7月</item>
+        <item>8月</item>
+        <item>9月</item>
+        <item>10月</item>
+        <item>11月</item>
+        <item>12月</item>
+    </array>
+    <array name="calendar_sun_day">
+        <item>1日</item>
+        <item>2日</item>
+        <item>3日</item>
+        <item>4日</item>
+        <item>5日</item>
+        <item>6日</item>
+        <item>7日</item>
+        <item>8日</item>
+        <item>9日</item>
+        <item>10日</item>
+        <item>11日</item>
+        <item>12日</item>
+        <item>13日</item>
+        <item>14日</item>
+        <item>15日</item>
+        <item>16日</item>
+        <item>17日</item>
+        <item>18日</item>
+        <item>19日</item>
+        <item>20日</item>
+        <item>21日</item>
+        <item>22日</item>
+        <item>23日</item>
+        <item>24日</item>
+        <item>25日</item>
+        <item>26日</item>
+        <item>27日</item>
+        <item>28日</item>
+        <item>29日</item>
+        <item>30日</item>
+        <item>31日</item>
+    </array>
+</resources>

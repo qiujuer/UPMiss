@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_margin="@dimen/len_16"
-            android:text="一款记录您重要日子的软件；您的时间秘书~~"
+            android:text="@string/txt_about_desc"
             android:textColor="@color/white_alpha_240"
             android:textSize="@dimen/font_14" />
 

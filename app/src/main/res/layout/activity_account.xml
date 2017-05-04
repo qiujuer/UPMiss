@@ -105,7 +105,7 @@
         <Button
             android:id="@+id/account_btn_change"
             style="@style/Button.Transparent"
-            android:layout_width="@dimen/len_48"
+            android:layout_width="wrap_content"
             android:text="@string/txt_not_have_account_btn" />
     </LinearLayout>
 

@@ -1,0 +1,183 @@
+<resources>
+
+    <string name="app_name">UPMiss</string>
+    <string name="app_welcome">欢迎您使用·UPMiss·！</string>
+
+    <string name="action_sync">同步</string>
+    <string name="action_save">保存</string>
+    <string name="action_find">发现</string>
+    <string name="action_help">帮助</string>
+    <string name="action_about">关于</string>
+    <string name="action_update">检查更新</string>
+    <string name="title_activity_main">UPMiss</string>
+    <string name="title_activity_detail">UPMiss</string>
+    <string name="title_activity_edit">编辑</string>
+    <string name="title_activity_create">新增</string>
+    <string name="title_activity_setting">个性化</string>
+    <string name="title_activity_account">账户</string>
+    <string name="title_activity_about">关于</string>
+    <string name="title_activity_share">分享</string>
+    <string name="title_activity_help">帮助</string>
+    <string name="title_activity_guide">引导</string>
+    <string name="title_activity_user">个人中心</string>
+    <string name="title_activity_follow">我的关注</string>
+    <string name="title_activity_search_kit">看日子</string>
+    <string name="title_activity_find">发现</string>
+    <string name="title_activity_contacts_add">添加联系人</string>
+    <string name="title_activity_contacts_edit">编辑联系人</string>
+    <string name="title_activity_contacts_detail">联系人</string>
+
+    <string name="title_dialog_relation">TA是你的谁?</string>
+    <string name="title_select_color">颜色</string>
+    <string name="title_select_date">日期</string>
+
+    <string name="day">Day</string>
+    <string name="date_format">yyyy-MM-dd</string>
+
+    <string name="txt_date_null">YYYY-MM-DD</string>
+    <string name="txt_null">Null</string>
+    <string name="txt_null_data">您还没有记录，赶快添加吧！</string>
+    <string name="txt_day">天</string>
+    <string name="txt_year">年</string>
+
+    <string name="txt_title_login">登陆</string>
+    <string name="txt_title_join">加入我们</string>
+    <string name="txt_user">账户</string>
+    <string name="txt_password">密码</string>
+    <string name="txt_password_confirm">确认密码</string>
+    <string name="txt_email">邮箱</string>
+    <string name="txt_have_account">已有账户？</string>
+    <string name="txt_have_account_btn">去登陆</string>
+    <string name="txt_not_have_account">还没有账户？</string>
+    <string name="txt_not_have_account_btn">去注册</string>
+    <string name="txt_go">GO</string>
+
+    <string name="txt_type_birthday">生日</string>
+    <string name="txt_type_memorial">纪念日</string>
+    <string name="txt_type_future">未来</string>
+    <string name="txt_date_lunar">阴历</string>
+    <string name="txt_date_sun">阳历</string>
+    <string name="contacts_gender_man">男</string>
+    <string name="contacts_gender_woman">女</string>
+
+    <string name="txt_o_share_summary">阳历：%1$s日\n阴历：%2$s\n距今：%3$s\n</string>
+    <string name="txt_o_share">分享</string>
+    <string name="txt_o_edit">编辑</string>
+    <string name="txt_o_delete">删除</string>
+    <string name="txt_o_save">保存截图</string>
+    <string name="txt_o_share_qq">QQ</string>
+    <string name="txt_o_share_weibo">微博</string>
+    <string name="txt_o_share_weixin">微信</string>
+    <string name="txt_o_share_more">更多</string>
+
+    <string name="txt_set_alert">提醒</string>
+    <string name="txt_set_color">颜色</string>
+    <string name="txt_set_start">起</string>
+    <string name="txt_set_end">止</string>
+
+    <string name="txt_dialog_color_select">Hello</string>
+    <string name="txt_dialog_negative">Cancel</string>
+    <string name="txt_dialog_positive">OK</string>
+
+    <string name="txt_status_delete_notes">是否确认删除？</string>
+    <string name="txt_status_sync_start">云同步中…</string>
+    <string name="txt_status_title_null">标题不能为空！</string>
+
+    <string name="txt_tip_error_server_login">登陆失败！</string>
+    <string name="txt_tip_error_server_register">注册失败！</string>
+    <string name="txt_tip_error_account">账户或密码错误！</string>
+    <string name="txt_tip_error_password">账户或密码错误！</string>
+    <string name="txt_tip_have_name">该账户已被注册！</string>
+    <string name="txt_tip_have_email">该邮箱已被注册！</string>
+    <string name="txt_tip_null_user">账户不能为空！</string>
+    <string name="txt_tip_null_password">密码长度应处于6~18位之间！</string>
+    <string name="txt_tip_null_email">邮箱不能为空！</string>
+
+    <string name="txt_remind_day">提前几天提醒</string>
+
+    <string name="txt_how_add_show_way">如何添加桌面小控件</string>
+    <string name="txt_add_show_way_widget">小部件</string>
+    <string name="btn_add_widget_way">添加桌面小部件</string>
+    <string name="txt_add_show_way_float_frame">悬浮框</string>
+    <string name="btn_add_float_frame_way">关于浮动框</string>
+    <string name="btn_add_float_frame_way_toast">正在努力研发中…</string>
+
+    <string name="txt_why_add_widget">为了更好的使用UPMiss，在桌面添加她的小部件吧！\n这样随时很醒目的就能看到她哦。</string>
+    <string name="txt_add_widget_first">首先要找到小部件在哪儿，如图：长按桌面，然后点击 添加插件 ,就可以找到她了。</string>
+    <string name="txt_add_widget_second">找到了么？接下来长按UPMiss小部件拉到桌面就OK啦~</string>
+    <string name="txt_other_add_widget">添加小部件的方式均大同小异，\n如果没有找到的话，可以求助度娘哈！</string>
+    <string name="txt_about_desc">一款记录您重要日子的软件；您的时间秘书~~</string>
+
+    <string name="btn_guide_skip">开始使用</string>
+    <string name="txt_guide_app_title">『欢迎使用』</string>
+    <string name="txt_guide_app_details">这是一款记录重要日子的软件</string>
+    <string name="txt_guide_synchronization_title">『云同步』</string>、
+    <string name="txt_guide_synchronization_details">随时同步，多设备共享使用，不必担心数据丢失</string>
+    <string name="txt_guide_timer_shaft_title">『时间轴』</string>
+    <string name="txt_guide_timer_shaft_details">时间顺序，随时查看，不错过特殊日子</string>
+    <string name="txt_guide_gift_Shop_title">『礼物店』</string>
+    <string name="txt_guide_gift_Shop_details">众多礼物，任意购选</string>
+    <string name="txt_guide_square_benediction_title">『祝福广场』</string>
+    <string name="txt_guide_square_benediction_details">收集祝福，给TA不一样的惊喜</string>
+    <string name="txt_guide_alert_title">『便捷提醒』</string>
+    <string name="txt_guide_alert_details">清晰明了，不打扰、不错过</string>
+
+    <string name="txt_find_gift">礼物店</string>
+    <string name="txt_find_wish">祝福广场</string>
+    <string name="txt_find_day">看日子</string>
+    <string name="txt_find_account">个人中心</string>
+
+    <string name="txt_user_code">扫一扫，关注我</string>
+    <string name="txt_user_account">账户</string>
+    <string name="txt_user_name">姓名</string>
+    <string name="txt_user_sex">性别</string>
+
+    <string name="txt_quick_add">添加</string>
+    <string name="txt_contacts_QQ">QQ</string>
+    <string name="txt_contacts_phone">手机</string>
+    <string name="txt_contacts_relation">关系</string>
+    <string name="txt_contacts_select">选择</string>
+
+    <string name="radio_user_sex_man">男</string>
+    <string name="radio_user_sex_woman">女</string>
+    <string name="txt_user_color">颜色</string>
+    <string name="btn_user_color">我喜欢的颜色</string>
+    <string name="btn_user_save">保存</string>
+    <string name="txt_user_status_ok">保存成功~</string>
+    <string name="txt_user_status_account">需要登陆账户！</string>
+    <string name="txt_user_status_sync">同步失败，请检查你的网络！</string>
+    <string name="txt_user_status_name">名字不能为空。</string>
+
+    <string name="txt_contacts_save_failing">保存失败</string>
+    <string name="txt_contacts_name">请先输入姓名</string>
+    <string name="txt_contacts_people">请先输入手机号码</string>
+
+    <string name="txt_search_kit_submit">Search</string>
+    <string name="txt_search_kit_str_lunar">阴历：%s</string>
+    <string name="txt_search_kit_str_sun">阳历：%s</string>
+    <string name="txt_search_kit_str_distance">距今：%s天</string>
+    <string name="txt_search_kit_str_zodiac">生肖：%s</string>
+    <string name="txt_search_kit_str_week">星期：%s</string>
+    <string name="txt_search_kit_str_constellation">星座：%s</string>
+
+    <string name="txt_contacts_detail_phone">手机：%s</string>
+    <string name="txt_contacts_detail_qq">QQ：%s</string>
+    <string name="txt_contacts_detail_gender">性别：%s</string>
+    <string name="txt_contacts_detail_relation">关系：%s</string>
+    <string name="txt_contacts_gain_failure">获取联系人失败，请重试</string>
+    <string name="txt_contacts_man">老公</string>
+    <string name="txt_contacts_woman">老婆</string>
+    <string name="txt_contacts_concern_relation">与谁有关系</string>
+
+    <string name="toast_check_updating">检查更新中…</string>
+    <string name="toast_check_update_new">已是最新版本！</string>
+
+    <string name="txt_update_title">本次更新（%1$s）</string>
+
+    <string name="txt_about_version">Version: 3.0.0</string>
+    <string name="txt_about_email">Email: qiujuer@live.cn</string>
+    <string name="txt_about_group">QQGroup: 387403637</string>
+    <string name="txt_about_alipay">AliPay: qiujuer</string>
+    <string name="txt_about_wechat">WeChat: qiujuerman</string>
+
+</resources>

@@ -53,9 +53,10 @@
             <Button
                 android:id="@+id/contacts_quick_add"
                 style="@style/Button.Transparent"
-                android:layout_width="@dimen/activity_edit_item_height"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/activity_edit_item_height"
                 android:layout_margin="0dp"
+                android:minWidth="@dimen/activity_edit_item_height"
                 android:paddingBottom="@dimen/len_2"
                 android:paddingLeft="@dimen/len_8"
                 android:paddingRight="@dimen/len_8"
@@ -160,11 +161,12 @@
             <TextView
                 android:id="@+id/contacts_txt_relation"
                 style="@style/Text.Background.Blue.Fill"
-                android:layout_width="@dimen/activity_edit_item_width"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/activity_edit_item_height"
                 android:background="@drawable/ic_txt_bg_fill_cyan"
                 android:clickable="true"
-                android:minHeight="@dimen/len_48" />
+                android:minHeight="@dimen/len_48"
+                android:minWidth="@dimen/activity_edit_item_width" />
         </LinearLayout>
 
         <net.qiujuer.genius.ui.widget.Button
