@@ -30,7 +30,7 @@
         <item>client</item>
         <item>leader</item>
     </array>
-    
+
     <array name="calendar_Sun_month">
         <item>Jan</item>
         <item>Feb</item>
@@ -46,36 +46,36 @@
         <item>Dec</item>
     </array>
     <array name="calendar_sun_day">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
-        <item>17</item>
-        <item>18</item>
-        <item>19</item>
-        <item>20</item>
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
-        <item>24</item>
-        <item>25</item>
-        <item>26</item>
-        <item>27</item>
-        <item>28</item>
-        <item>29</item>
-        <item>30</item>
-        <item>31</item>
+        <item>&#160;01&#160;</item>
+        <item>&#160;02&#160;</item>
+        <item>&#160;03&#160;</item>
+        <item>&#160;04&#160;</item>
+        <item>&#160;05&#160;</item>
+        <item>&#160;06&#160;</item>
+        <item>&#160;07&#160;</item>
+        <item>&#160;08&#160;</item>
+        <item>&#160;09&#160;</item>
+        <item>&#160;10&#160;</item>
+        <item>&#160;11&#160;</item>
+        <item>&#160;12&#160;</item>
+        <item>&#160;13&#160;</item>
+        <item>&#160;14&#160;</item>
+        <item>&#160;15&#160;</item>
+        <item>&#160;16&#160;</item>
+        <item>&#160;17&#160;</item>
+        <item>&#160;18&#160;</item>
+        <item>&#160;19&#160;</item>
+        <item>&#160;20&#160;</item>
+        <item>&#160;21&#160;</item>
+        <item>&#160;22&#160;</item>
+        <item>&#160;23&#160;</item>
+        <item>&#160;24&#160;</item>
+        <item>&#160;25&#160;</item>
+        <item>&#160;26&#160;</item>
+        <item>&#160;27&#160;</item>
+        <item>&#160;28&#160;</item>
+        <item>&#160;29&#160;</item>
+        <item>&#160;30&#160;</item>
+        <item>&#160;31&#160;</item>
     </array>
 </resources>
