@@ -32,6 +32,8 @@ public class Application extends android.app.Application {
         Cache.init();
     }
 
+
+
     public void dispose() {
         AppPresenter.dispose();
 
@@ -48,7 +50,6 @@ public class Application extends android.app.Application {
     }
 
     public void exit() {
-        dispose();
         Cache.destroy();
         for (Activity activity : mActivities) {
             if (!activity.isFinishing())

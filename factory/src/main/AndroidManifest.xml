@@ -15,8 +15,8 @@
             android:name="net.qiujuer.tips.factory.service.MissService"
             android:enabled="true"
             android:exported="false"
-            android:permission="1000"
-            android:process="net.qiujuer.tips.factory.service.MissService">
+            android:permission="1000">
+            <!--android:process="net.qiujuer.tips.factory.service.MissService"-->
             <intent-filter>
                 <action android:name="net.qiujuer.tips.factory.service.IMissServiceInterface" />
                 <category android:name="android.intent.category.DEFAULT" />

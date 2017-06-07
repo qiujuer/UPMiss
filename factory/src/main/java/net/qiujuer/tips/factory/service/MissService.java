@@ -67,7 +67,6 @@ public class MissService extends Service {
         Model.log(TAG, "onCreate");
 
         Application application = getApplication();
-        Model.setApplication(application);
 
         mBinder = new MissServiceImpl(application);
         mReceiver = new MissServiceBroadcastReceiver();
@@ -109,8 +108,6 @@ public class MissService extends Service {
                 e.printStackTrace();
             }
         }
-
-        Model.dispose();
 
         super.onDestroy();
 

@@ -32,7 +32,7 @@ public class Model {
     }
 
     public static void setApplication(Application application) {
-        if (application != null && application != APPLICATION) {
+        if (application == null || application != APPLICATION) {
             Model.log(TAG, "setApplication");
 
             APPLICATION = application;
