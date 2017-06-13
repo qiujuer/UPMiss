@@ -8,6 +8,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.SpannableString;
+import android.text.Spanned;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.LayoutInflater;
@@ -26,6 +27,9 @@ import net.qiujuer.tips.view.activity.MainActivity;
 import net.qiujuer.tips.view.activity.RecordDetailActivity;
 
 import java.util.List;
+
+import uk.co.chrisjenx.calligraphy.CalligraphyTypefaceSpan;
+import uk.co.chrisjenx.calligraphy.TypefaceUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -79,7 +83,7 @@ public class QuickFragment extends Fragment implements View.OnClickListener, Dra
     }
 
     private CharSequence getTopText(long occupancy, final String suffix) {
-        final String str = " " + String.valueOf(occupancy) + suffix;
+        final String str = String.valueOf(occupancy) + "\n" + suffix;
         final int len = str.length();
         final int lenFx = len - suffix.length();
         final Resources resources = getResources();

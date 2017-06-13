@@ -93,7 +93,6 @@ public class RecordsViewHolder extends RecyclerView.ViewHolder {
 
         // Create the Typeface you want to apply to certain text
         CalligraphyTypefaceSpan typefaceSpan = new CalligraphyTypefaceSpan(TypefaceUtils.load(resources.getAssets(), "fonts/Hero.otf"));
-        // Apply typeface to the Spannable 0 - 6 "Hello!" This can of course by dynamic.
         sBuilder.setSpan(typefaceSpan, 0, dayLen, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         // Font
         sBuilder.setSpan(new AbsoluteSizeSpan(resources.getDimensionPixelSize(R.dimen.font_24)),

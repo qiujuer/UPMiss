@@ -28,6 +28,7 @@
         android:layout_below="@id/item_sta_pie_chart"
         android:layout_centerHorizontal="true"
         android:text="@string/txt_null"
+        android:textAlignment="center"
         android:textColor="@color/cyan_700"
         android:textSize="@dimen/font_12" />
 </RelativeLayout>
