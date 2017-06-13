@@ -16,6 +16,7 @@ import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,7 +27,6 @@ import android.widget.Toast;
 import net.qiujuer.genius.ui.widget.ImageView;
 import net.qiujuer.genius.ui.widget.Loading;
 import net.qiujuer.tips.R;
-import net.qiujuer.tips.factory.model.Model;
 import net.qiujuer.tips.factory.model.api.ProductVersionModel;
 import net.qiujuer.tips.factory.presenter.ProductPresenter;
 import net.qiujuer.tips.factory.presenter.SyncPresenter;
@@ -65,7 +65,6 @@ public class MainActivity extends BaseActivity implements ProductView, Toolbar.O
         initTitle();
 
         mCreate = findViewById(R.id.main_img_create);
-        mCreate.setVisibility(View.VISIBLE);
         mCreate.setOnClickListener(this);
 
         mAdapter = new SectionsPagerAdapter(getFragmentManager());
@@ -76,8 +75,8 @@ public class MainActivity extends BaseActivity implements ProductView, Toolbar.O
 
         mPresenter = new SyncPresenter(this);
 
-        // Get the Create button Translation 56+16 dp
-        mCreateTranslationY = (int) (getResources().getDisplayMetrics().density * 72);
+        // Get the Create button Translation 56+16+8 dp
+        mCreateTranslationY = (int) (getResources().getDisplayMetrics().density * 80);
     }
 
     @Override
@@ -283,7 +282,6 @@ public class MainActivity extends BaseActivity implements ProductView, Toolbar.O
 
         @Override
         public void onPageScrollStateChanged(int state) {
-            Model.log("MAIN", "onPageScrollStateChanged: " + state);
         }
     }
 }
