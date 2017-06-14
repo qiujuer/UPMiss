@@ -36,7 +36,7 @@
 
     <string name="txt_date_null">YYYY-MM-DD</string>
     <string name="txt_null">Null</string>
-    <string name="txt_null_data">Empty, add it up!</string>
+    <string name="txt_null_data">Absolutely empty!</string>
     <string name="txt_day">Day</string>
     <string name="txt_year">Year</string>
 

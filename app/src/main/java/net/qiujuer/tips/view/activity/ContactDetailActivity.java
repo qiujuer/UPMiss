@@ -6,6 +6,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -139,16 +140,26 @@ public class ContactDetailActivity extends BlurActivity implements ContactDetail
 
     @Override
     public void setPhoneNumber(String phoneNumber) {
-        String phone = getResources().getString(R.string.txt_contacts_detail_phone);
-        phone = String.format(phone, phoneNumber);
-        mContactsPhone.setText(phone);
+        if (TextUtils.isEmpty(phoneNumber)) {
+            mContactsPhone.setVisibility(View.GONE);
+        } else {
+            String phone = getResources().getString(R.string.txt_contacts_detail_phone);
+            phone = String.format(phone, phoneNumber);
+            mContactsPhone.setText(phone);
+            mContactsPhone.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
     public void setQQ(String qq) {
-        String qqNumber = getResources().getString(R.string.txt_contacts_detail_qq);
-        qqNumber = String.format(qqNumber, qq);
-        mContactsQq.setText(qqNumber);
+        if (TextUtils.isEmpty(qq)) {
+            mContactsQq.setVisibility(View.GONE);
+        } else {
+            String qqNumber = getResources().getString(R.string.txt_contacts_detail_qq);
+            qqNumber = String.format(qqNumber, qq);
+            mContactsQq.setText(qqNumber);
+            mContactsQq.setVisibility(View.VISIBLE);
+        }
     }
 
     @Override
