@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">Open</string>
-    <string name="title_activity_wxentry">微信</string>
+    <string name="title_activity_wxentry">WeChat</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="txt_share_platform">分享到</string>
-    <string name="txt_share_platform_wechat">微信</string>
-    <string name="txt_share_platform_wechatfriends">朋友圈</string>
+    <string name="txt_share_platform">Share to</string>
+    <string name="txt_share_platform_wechat">WeChat</string>
+    <string name="txt_share_platform_wechatfriends">Moments</string>
     <string name="txt_share_platform_qq">QQ</string>
-    <string name="txt_share_platform_sina">微博</string>
+    <string name="txt_share_platform_sina">Sina</string>
 </resources>
