@@ -159,7 +159,7 @@ public class RecordAddActivity extends BlurActivity implements RecordAddView,
         mTimeType.check(R.id.edit_radio_time_type_solar);
 
         // Color
-        int color = Resource.Color.COLORS[new Random().nextInt(20) + 1];
+        int color = Resource.Color.COLORS[new Random().nextInt(Resource.Color.COLORS.length - 1) + 1];
         mColor.setTag(color);
         mColor.setBackgroundColor(color);
 

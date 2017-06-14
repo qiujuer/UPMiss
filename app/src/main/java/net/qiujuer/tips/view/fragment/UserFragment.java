@@ -80,7 +80,7 @@ public class UserFragment extends Fragment implements View.OnClickListener, User
         setSex(1);
 
         // Color
-        int color = Resource.Color.COLORS[new Random().nextInt(20) + 1];
+        int color = Resource.Color.COLORS[new Random().nextInt(Resource.Color.COLORS.length - 1) + 1];
         setColor(color);
 
         // Time

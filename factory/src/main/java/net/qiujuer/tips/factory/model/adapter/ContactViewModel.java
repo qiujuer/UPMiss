@@ -119,11 +119,12 @@ public class ContactViewModel implements Comparable<ContactViewModel>, Parcelabl
     public static int getNameColor(String name) {
         int bgColor = Color.TRANSPARENT;
         int[] colorArray = Resource.Color.COLORS;
+        int len = colorArray.length - 1;
         int index = 0;
         if (!TextUtils.isEmpty(name))
-            index = Math.abs(name.hashCode()) % (colorArray.length);
-        if (index < colorArray.length)
-            bgColor = colorArray[index];
+            index = Math.abs(name.hashCode()) % (len);
+        if (index < len)
+            bgColor = colorArray[index + 1];
         return bgColor;
     }
 }
