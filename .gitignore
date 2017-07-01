@@ -47,3 +47,4 @@ captures/
 
 app/gradle.properties
 .DS_Store
+app/release/output.json
