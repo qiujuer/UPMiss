@@ -142,7 +142,7 @@
     <string name="radio_user_sex_woman">Woman</string>
     <string name="txt_user_color">Color</string>
     <string name="btn_user_color">Like color</string>
-    <string name="btn_user_save">Save it</string>
+    <string name="btn_user_save">SAVE</string>
     <string name="txt_user_status_ok">Save succeed~</string>
     <string name="txt_user_status_account">Sign in to use!</string>
     <string name="txt_user_status_sync">Sync failed, check your network</string>
