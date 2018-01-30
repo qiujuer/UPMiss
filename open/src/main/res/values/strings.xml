@@ -17,4 +17,8 @@
     <string name="share_wx_code_unsupported">Sharing unsupported!</string>
     <string name="share_wx_code_ban">Sharing is prohibited!</string>
     <string name="share_wx_code_unknown">Unknown error!</string>
+
+    <string name="share_qq_code_complete">@string/share_wx_code_success</string>
+    <string name="share_qq_code_cancel">@string/share_wx_code_cancel</string>
+    <string name="share_qq_code_error">@string/share_wx_code_unknown</string>
 </resources>

@@ -2,9 +2,11 @@ package net.qiujuer.tips.open;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import com.sina.weibo.sdk.api.ImageObject;
 import com.sina.weibo.sdk.api.TextObject;
@@ -31,6 +33,7 @@ import net.qiujuer.tips.open.weibo.AccessTokenKeeper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.lang.ref.WeakReference;
 
 /**
  * UPMiss share
@@ -62,6 +65,11 @@ public class Share {
         return TENCENT;
     }
 
+    public static void onActivityResult(Context context, int requestCode, int resultCode, Intent data) {
+        if (requestCode == com.tencent.connect.common.Constants.REQUEST_QQ_SHARE) {
+            Tencent.onActivityResultData(requestCode, resultCode, data, getQQShareListener(context));
+        }
+    }
 
     private synchronized static IWXAPI getWxApi() {
         if (WX_API == null) {
@@ -107,7 +115,7 @@ public class Share {
         params.putString(QQShare.SHARE_TO_QQ_APP_NAME, Constants.APP_NAME);
         params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
         params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, 0x00);
-        TENCENT.shareToQQ(activity, params, qqShareListener);
+        TENCENT.shareToQQ(activity, params, getQQShareListener(activity));
     }
 
     public static void shareToWeibo(String transaction, Activity activity, String title, String summary, Bitmap img) {
@@ -172,22 +180,49 @@ public class Share {
         }
     };
 
-    private static IUiListener qqShareListener = new IUiListener() {
+
+    public static QQShareListener getQQShareListener(Context context) {
+        QQShareListener qqShareListener;
+        if (QQ_LISTENER_REF == null || (qqShareListener = QQ_LISTENER_REF.get()) == null) {
+            qqShareListener = new QQShareListener();
+            QQ_LISTENER_REF = new WeakReference<>(qqShareListener);
+        }
+        qqShareListener.setContext(context);
+        return qqShareListener;
+    }
+
+    private static WeakReference<QQShareListener> QQ_LISTENER_REF;
+
+    private static class QQShareListener implements IUiListener {
+        private WeakReference<Context> mContextRef;
+
+        public void setContext(Context context) {
+            mContextRef = new WeakReference<>(context);
+        }
+
+        private void showText(int resId) {
+            Context context = mContextRef.get();
+            if (context == null) {
+                return;
+            }
+            Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
+        }
+
         @Override
         public void onCancel() {
-
+            showText(R.string.share_qq_code_cancel);
         }
 
         @Override
         public void onComplete(Object response) {
-
+            showText(R.string.share_qq_code_complete);
         }
 
         @Override
         public void onError(UiError e) {
-
+            showText(R.string.share_qq_code_error);
         }
-    };
+    }
 
     private static byte[] bmpToByteArray(Bitmap bitmap) {
         ByteArrayOutputStream os = null;
