@@ -177,4 +177,10 @@ public class ShareActivity extends BlurActivity implements View.OnClickListener,
         super.onActivityResult(requestCode, resultCode, data);
         Share.onActivityResult(this, requestCode, resultCode, data);
     }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Share.onIntent(this, intent);
+    }
 }

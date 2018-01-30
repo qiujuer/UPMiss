@@ -21,4 +21,8 @@
     <string name="share_qq_code_complete">@string/share_wx_code_success</string>
     <string name="share_qq_code_cancel">@string/share_wx_code_cancel</string>
     <string name="share_qq_code_error">@string/share_wx_code_unknown</string>
+
+    <string name="share_wb_code_success">@string/share_wx_code_success</string>
+    <string name="share_wb_code_cancel">@string/share_wx_code_cancel</string>
+    <string name="share_wb_code_error">@string/share_wx_code_unknown</string>
 </resources>

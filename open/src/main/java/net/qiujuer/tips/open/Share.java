@@ -8,16 +8,12 @@ import android.graphics.Matrix;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.sina.weibo.sdk.WbSdk;
 import com.sina.weibo.sdk.api.ImageObject;
 import com.sina.weibo.sdk.api.TextObject;
 import com.sina.weibo.sdk.api.WeiboMultiMessage;
-import com.sina.weibo.sdk.api.share.IWeiboShareAPI;
-import com.sina.weibo.sdk.api.share.SendMultiMessageToWeiboRequest;
-import com.sina.weibo.sdk.api.share.WeiboShareSDK;
 import com.sina.weibo.sdk.auth.AuthInfo;
-import com.sina.weibo.sdk.auth.Oauth2AccessToken;
-import com.sina.weibo.sdk.auth.WeiboAuthListener;
-import com.sina.weibo.sdk.exception.WeiboException;
+import com.sina.weibo.sdk.share.WbShareHandler;
 import com.tencent.connect.share.QQShare;
 import com.tencent.mm.opensdk.modelmsg.SendMessageToWX;
 import com.tencent.mm.opensdk.modelmsg.WXImageObject;
@@ -29,7 +25,6 @@ import com.tencent.tauth.Tencent;
 import com.tencent.tauth.UiError;
 
 import net.qiujuer.tips.common.tools.FileTool;
-import net.qiujuer.tips.open.weibo.AccessTokenKeeper;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -48,19 +43,17 @@ public class Share {
 
     private static Tencent TENCENT;
     private static IWXAPI WX_API;
-    private static IWeiboShareAPI WB_API;
-
-    private static Context APP_CONTEXT;
+    private static WeakReference<WbShareHandler> WB_API_REF;
 
     public static void init(Context context) {
-        APP_CONTEXT = context;
-        if (TENCENT == null)
-            TENCENT = Tencent.createInstance(Constants.QQ_APP_ID, context);
+        // 微博初始化
+        AuthInfo mAuthInfo = new AuthInfo(context, Constants.WB_APP_ID, Constants.WB_REDIRECT_URL, Constants.WB_SCOPE);
+        WbSdk.install(context, mAuthInfo);
     }
 
-    private synchronized static Tencent getTencent() {
+    private synchronized static Tencent getTencent(Context context) {
         if (TENCENT == null) {
-            TENCENT = Tencent.createInstance(Constants.QQ_APP_ID, APP_CONTEXT);
+            TENCENT = Tencent.createInstance(Constants.QQ_APP_ID, context.getApplicationContext());
         }
         return TENCENT;
     }
@@ -71,24 +64,30 @@ public class Share {
         }
     }
 
-    private synchronized static IWXAPI getWxApi() {
+    public static void onIntent(Activity activity, Intent intent) {
+        if (intent != null && WB_API_REF != null && WB_API_REF.get() != null) {
+            getWbApi(activity).doResultIntent(intent, getWbShareCallback(activity));
+        }
+    }
+
+    private synchronized static IWXAPI getWxApi(Context context) {
         if (WX_API == null) {
-            IWXAPI wxApi = WXAPIFactory.createWXAPI(APP_CONTEXT, Constants.WX_APP_ID, true);
+            IWXAPI wxApi = WXAPIFactory.createWXAPI(context.getApplicationContext(), Constants.WX_APP_ID, true);
             wxApi.registerApp(Constants.WX_APP_ID);
             WX_API = wxApi;
         }
         return WX_API;
     }
 
-    private synchronized static IWeiboShareAPI getWbApi() {
-        if (WB_API == null) {
-            IWeiboShareAPI mWeiboShareAPI = WeiboShareSDK.createWeiboAPI(APP_CONTEXT, Constants.WB_APP_ID);
-            mWeiboShareAPI.registerApp();
-            WB_API = mWeiboShareAPI;
+    private synchronized static WbShareHandler getWbApi(Activity activity) {
+        WbShareHandler handler;
+        if (WB_API_REF == null || (handler = WB_API_REF.get()) == null) {
+            handler = new WbShareHandler(activity);
+            handler.registerApp();
+            WB_API_REF = new WeakReference<>(handler);
         }
-        return WB_API;
+        return handler;
     }
-
 
     public static void share(String transaction, Activity activity, int type, String title, String summary, Bitmap img) {
         if (type == TYPE_WX) {
@@ -96,13 +95,13 @@ public class Share {
         } else if (type == TYPE_WXF) {
             shareToWechat(transaction, activity, title, summary, img, SendMessageToWX.Req.WXSceneTimeline);
         } else if (type == TYPE_WB) {
-            shareToWeibo(transaction, activity, title, summary, img);
+            shareToWeibo(activity, title, summary, img);
         } else if (type == TYPE_QQ) {
             shareToQQ(activity, title, summary, img);
         }
     }
 
-    public static void shareToQQ(Activity activity, String title, String summary, Bitmap img) {
+    private static void shareToQQ(Activity activity, String title, String summary, Bitmap img) {
         String path = FileTool.saveBitmap(img, "Image", "Share.png");
         if (path == null)
             return;
@@ -115,10 +114,10 @@ public class Share {
         params.putString(QQShare.SHARE_TO_QQ_APP_NAME, Constants.APP_NAME);
         params.putInt(QQShare.SHARE_TO_QQ_KEY_TYPE, QQShare.SHARE_TO_QQ_TYPE_IMAGE);
         params.putInt(QQShare.SHARE_TO_QQ_EXT_INT, 0x00);
-        TENCENT.shareToQQ(activity, params, getQQShareListener(activity));
+        getTencent(activity).shareToQQ(activity, params, getQQShareListener(activity));
     }
 
-    public static void shareToWeibo(String transaction, Activity activity, String title, String summary, Bitmap img) {
+    private static void shareToWeibo(Activity activity, String title, String summary, Bitmap img) {
         ImageObject imageObject = new ImageObject();
         imageObject.imageData = bmpToByteArray(img);
 
@@ -129,23 +128,15 @@ public class Share {
         message.textObject = textObject;
         message.imageObject = imageObject;
 
-        SendMultiMessageToWeiboRequest request = new SendMultiMessageToWeiboRequest();
-        request.transaction = transaction;
-        request.multiMessage = message;
-
-        AuthInfo authInfo = new AuthInfo(activity, Constants.WB_APP_ID, Constants.WB_REDIRECT_URL, Constants.WB_SCOPE);
-        Oauth2AccessToken accessToken = AccessTokenKeeper.readAccessToken(APP_CONTEXT);
-        String token = "";
-        if (accessToken != null) {
-            token = accessToken.getToken();
-        }
-        IWeiboShareAPI api = getWbApi();
-        api.sendRequest(activity, request, authInfo, token, weiboAuthListener);
+        WbShareHandler wbApi = getWbApi(activity);
+        wbApi.shareMessage(message, false);
+        // Bind cache
+        activity.getWindow().getDecorView().setTag(wbApi);
     }
 
 
     private static void shareToWechat(String transaction, Activity activity, String title, String summary, Bitmap img, int flag) {
-        IWXAPI wxApi = getWxApi();
+        IWXAPI wxApi = getWxApi(activity);
 
         WXImageObject imgObj = new WXImageObject(img);
 
@@ -161,27 +152,40 @@ public class Share {
     }
 
 
-    private static WeiboAuthListener weiboAuthListener = new WeiboAuthListener() {
+    private static WeakReference<WbShareCallback> WB_LISTENER_REF;
+
+    private static WbShareCallback getWbShareCallback(Context context) {
+        WbShareCallback wbShareCallback;
+        if (WB_LISTENER_REF == null || (wbShareCallback = WB_LISTENER_REF.get()) == null) {
+            wbShareCallback = new WbShareCallback();
+            WB_LISTENER_REF = new WeakReference<>(wbShareCallback);
+        }
+        wbShareCallback.setContext(context);
+        return wbShareCallback;
+    }
+
+    private static class WbShareCallback extends AbsShareCallback implements com.sina.weibo.sdk.share.WbShareCallback {
 
         @Override
-        public void onWeiboException(WeiboException arg0) {
-
+        public void onWbShareSuccess() {
+            showText(R.string.share_wb_code_success);
         }
 
         @Override
-        public void onComplete(Bundle bundle) {
-            Oauth2AccessToken newToken = Oauth2AccessToken.parseAccessToken(bundle);
-            AccessTokenKeeper.writeAccessToken(APP_CONTEXT, newToken);
+        public void onWbShareCancel() {
+            showText(R.string.share_wb_code_cancel);
         }
 
         @Override
-        public void onCancel() {
-
+        public void onWbShareFail() {
+            showText(R.string.share_wb_code_error);
         }
-    };
+    }
 
 
-    public static QQShareListener getQQShareListener(Context context) {
+    private static WeakReference<QQShareListener> QQ_LISTENER_REF;
+
+    private static QQShareListener getQQShareListener(Context context) {
         QQShareListener qqShareListener;
         if (QQ_LISTENER_REF == null || (qqShareListener = QQ_LISTENER_REF.get()) == null) {
             qqShareListener = new QQShareListener();
@@ -191,23 +195,7 @@ public class Share {
         return qqShareListener;
     }
 
-    private static WeakReference<QQShareListener> QQ_LISTENER_REF;
-
-    private static class QQShareListener implements IUiListener {
-        private WeakReference<Context> mContextRef;
-
-        public void setContext(Context context) {
-            mContextRef = new WeakReference<>(context);
-        }
-
-        private void showText(int resId) {
-            Context context = mContextRef.get();
-            if (context == null) {
-                return;
-            }
-            Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
-        }
-
+    private static class QQShareListener extends AbsShareCallback implements IUiListener {
         @Override
         public void onCancel() {
             showText(R.string.share_qq_code_cancel);
@@ -223,6 +211,23 @@ public class Share {
             showText(R.string.share_qq_code_error);
         }
     }
+
+    private static class AbsShareCallback {
+        private WeakReference<Context> mContextRef;
+
+        public void setContext(Context context) {
+            mContextRef = new WeakReference<>(context);
+        }
+
+        protected void showText(int resId) {
+            Context context = mContextRef.get();
+            if (context == null) {
+                return;
+            }
+            Toast.makeText(context, resId, Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     private static byte[] bmpToByteArray(Bitmap bitmap) {
         ByteArrayOutputStream os = null;
