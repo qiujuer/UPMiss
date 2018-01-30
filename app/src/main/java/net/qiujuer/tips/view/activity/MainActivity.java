@@ -16,7 +16,6 @@ import android.text.Html;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -202,16 +201,17 @@ public class MainActivity extends BaseActivity implements ProductView, Toolbar.O
         update_info.setMovementMethod(LinkMovementMethod.getInstance());
         update_info.setText(Html.fromHtml(model.getContent()));
 
-        showDialog(this, model.getVerName(), viewAddEmployee, "暂不更新", "立刻更新", null, new DialogInterface.OnClickListener() {
-
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Uri appUri = Uri.parse(model.getAddress());
-                Intent intent = new Intent(Intent.ACTION_VIEW, appUri);
-                startActivity(intent);
-                dialog.dismiss();
-            }
-        }).show();
+        showDialog(this, model.getVerName(), viewAddEmployee,
+                getString(R.string.txt_update_cancel), getString(R.string.txt_update_submit),
+                null, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Uri appUri = Uri.parse(model.getAddress());
+                        Intent intent = new Intent(Intent.ACTION_VIEW, appUri);
+                        startActivity(intent);
+                        dialog.dismiss();
+                    }
+                }).show();
     }
 
 

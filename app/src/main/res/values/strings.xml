@@ -173,6 +173,8 @@
     <string name="toast_check_update_new">Already latest version！</string>
 
     <string name="txt_update_title">Update（%1$s）</string>
+    <string name="txt_update_cancel">Cancel</string>
+    <string name="txt_update_submit">Update</string>
 
     <string name="txt_about_version">Version: 3.0.0</string>
     <string name="txt_about_email">Email: qiujuer@live.cn</string>
