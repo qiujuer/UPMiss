@@ -1,13 +1,17 @@
 package net.qiujuer.tips.view.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.Resources;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.StringRes;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.AbsoluteSizeSpan;
@@ -38,6 +42,7 @@ import static java.util.Calendar.DAY_OF_WEEK;
 
 public class RecordDetailActivity extends BlurActivity implements RecordDetailView, OnClickListener {
     private static final String SUFFIX = "DAY";
+    private static final int PERMISSIONS_REQUEST_WRITE_STORAGE = 101;
 
     private UUID mId;
     private RecordDetailPresenter mPresenter;
@@ -142,12 +147,7 @@ public class RecordDetailActivity extends BlurActivity implements RecordDetailVi
                 });
                 break;
             case R.id.detail_btn_save:
-                hideOperation(new Runnable() {
-                    @Override
-                    public void run() {
-                        mPresenter.saveScreen();
-                    }
-                });
+                savePicture();
                 break;
             case R.id.detail_btn_edit:
                 hideOperation(new Runnable() {
@@ -344,6 +344,38 @@ public class RecordDetailActivity extends BlurActivity implements RecordDetailVi
         } else {
             if (runnable != null)
                 runnable.run();
+        }
+    }
+
+    private void savePicture() {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            hideOperation(new Runnable() {
+                @Override
+                public void run() {
+                    mPresenter.saveScreen();
+                }
+            });
+        } else {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                showSettingPermissionDialog(this, R.string.status_failed_no_write_permission);
+            } else {
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                        PERMISSIONS_REQUEST_WRITE_STORAGE);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        if (requestCode == PERMISSIONS_REQUEST_WRITE_STORAGE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                savePicture();
+            } else {
+                showSettingPermissionDialog(this, R.string.status_failed_no_write_permission);
+            }
         }
     }
 
