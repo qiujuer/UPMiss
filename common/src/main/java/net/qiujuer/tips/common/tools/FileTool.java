@@ -59,7 +59,11 @@ public class FileTool {
             dirPath = extPath + File.separator + dirName;
 
         File dir = new File(dirPath);
-        if (!dir.isDirectory() && !dir.mkdirs()) {
+        if (!dir.exists()) {
+            if (!dir.mkdirs()) {
+                return null;
+            }
+        } else if (!dir.isDirectory()) {
             return null;
         }
 
@@ -70,7 +74,7 @@ public class FileTool {
                 return null;
             }
             fos = new FileOutputStream(file);
-            bmp.compress(Bitmap.CompressFormat.PNG, 100, fos);
+            bmp.compress(Bitmap.CompressFormat.PNG, 96, fos);
             return file.getAbsolutePath();
         } catch (IOException e) {
             e.printStackTrace();
