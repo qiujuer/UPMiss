@@ -36,4 +36,9 @@
     <string name="status_opt_delete_error">删除失败，请稍后再试…</string>
     <string name="status_opt_save_ok">保存截图成功！</string>
     <string name="status_opt_save_error">保存截图失败，请检查权限！</string>
+
+    <string name="status_failed_permission">权限异常</string>
+    <string name="status_failed_permission_cancel">取消</string>
+    <string name="status_failed_permission_submit">去设置</string>
+    <string name="status_failed_no_write_permission">抱歉，没有存储权限！\n建议打开存储权限，以便UPMiss存储数据。</string>
 </resources>

@@ -1,11 +1,16 @@
 package net.qiujuer.tips.view.activity;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
 import net.qiujuer.tips.Application;
 import net.qiujuer.tips.R;
@@ -94,5 +99,48 @@ public class BaseActivity extends BackgroundActivity {
         AlertDialog alertDialog = builder.create();
         alertDialog.getWindow().setGravity(Gravity.BOTTOM);
         return alertDialog;
+    }
+
+    protected AlertDialog showSettingPermissionDialog(Context context, int title, View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.Theme_Dialog);
+        if (title != 0)
+            builder.setTitle(title);
+        if (view != null)
+            builder.setView(view);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.getWindow().setGravity(Gravity.BOTTOM);
+        return alertDialog;
+    }
+
+    public void showSettingPermissionDialog(final Context context, int detail) {
+        // 视图绑定
+        LayoutInflater layoutInflater = LayoutInflater.from(this);
+        @SuppressLint("InflateParams")
+        View viewAddEmployee = layoutInflater.inflate(
+                R.layout.item_alert_permission, null);
+        // 控件定义绑定
+        final TextView detailText = viewAddEmployee
+                .findViewById(R.id.txt_detail);
+        detailText.setText(detail);
+
+        showDialog(this, context.getString(R.string.status_failed_permission), viewAddEmployee,
+                context.getString(R.string.status_failed_permission_cancel),
+                context.getString(R.string.status_failed_permission_submit),
+                null,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        showSystemAppSetting(context);
+                        dialog.dismiss();
+                    }
+                }).show();
+    }
+
+    public static void showSystemAppSetting(Context context) {
+        Intent localIntent = new Intent();
+        localIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        localIntent.setAction("android.settings.APPLICATION_DETAILS_SETTINGS");
+        localIntent.setData(Uri.fromParts("package", context.getPackageName(), null));
+        context.startActivity(localIntent);
     }
 }

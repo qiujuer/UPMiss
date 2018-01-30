@@ -36,4 +36,9 @@
     <string name="status_opt_delete_error">Delete failed…</string>
     <string name="status_opt_save_ok">Saved screenshot!</string>
     <string name="status_opt_save_error">Failed to save the screenshot!</string>
+
+    <string name="status_failed_permission">Permission Failed</string>
+    <string name="status_failed_permission_cancel">Cancel</string>
+    <string name="status_failed_permission_submit">Setting</string>
+    <string name="status_failed_no_write_permission">Sorry, No storage rights!\nIt is recommended to open the storage permissions for UPMiss to store data.</string>
 </resources>
