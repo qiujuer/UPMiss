@@ -17,6 +17,14 @@
         <item name="android:windowAnimationStyle">@style/Theme.AnimationStyle.Fade</item>
     </style>
 
+    <style name="Theme.None" parent="Theme.Trans">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
     <style name="Theme.Launch" parent="Theme">
         <item name="android:windowBackground">@drawable/ic_launch_bg</item>
         <item name="android:windowFullscreen">true</item>

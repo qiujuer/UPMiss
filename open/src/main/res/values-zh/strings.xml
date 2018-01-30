@@ -10,4 +10,11 @@
     <string name="txt_share_platform_wechatfriends">朋友圈</string>
     <string name="txt_share_platform_qq">QQ</string>
     <string name="txt_share_platform_sina">微博</string>
+
+    <string name="share_wx_code_success">分享成功</string>
+    <string name="share_wx_code_cancel">分享取消</string>
+    <string name="share_wx_code_deny">分享拒绝</string>
+    <string name="share_wx_code_unsupported">不支持分享</string>
+    <string name="share_wx_code_ban">禁止分享</string>
+    <string name="share_wx_code_unknown">未知错误</string>
 </resources>

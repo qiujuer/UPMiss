@@ -67,8 +67,9 @@
         <activity
             android:name=".wxapi.WXEntryActivity"
             android:label="@string/title_activity_wxentry"
+            android:exported="true"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Trans" />
+            android:theme="@style/Theme.None" />
         <activity
             android:name=".view.activity.HelpActivity"
             android:label="@string/title_activity_help"

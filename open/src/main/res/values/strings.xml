@@ -10,4 +10,11 @@
     <string name="txt_share_platform_wechatfriends">Moments</string>
     <string name="txt_share_platform_qq">QQ</string>
     <string name="txt_share_platform_sina">Sina</string>
+
+    <string name="share_wx_code_success">Sharing success.</string>
+    <string name="share_wx_code_cancel">Sharing is cancelled.</string>
+    <string name="share_wx_code_deny">Sharing is denied!</string>
+    <string name="share_wx_code_unsupported">Sharing unsupported!</string>
+    <string name="share_wx_code_ban">Sharing is prohibited!</string>
+    <string name="share_wx_code_unknown">Unknown error!</string>
 </resources>
