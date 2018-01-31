@@ -23,7 +23,7 @@ public class MissWidget extends AppWidgetProvider {
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
         // Widget button
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.layout_miss_widget);
-        Intent intent = context.getPackageManager().getLaunchIntentForPackage("net.qiujuer.tips");
+        Intent intent = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
         PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
         views.setOnClickPendingIntent(R.id.btn_start_activity, pending);
         appWidgetManager.updateAppWidget(appWidgetIds, views);

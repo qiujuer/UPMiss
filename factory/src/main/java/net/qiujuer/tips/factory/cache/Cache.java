@@ -13,7 +13,7 @@ import net.qiujuer.tips.factory.model.adapter.RecordViewModel;
 import net.qiujuer.tips.factory.model.db.ContactModel;
 import net.qiujuer.tips.factory.model.db.RecordModel;
 import net.qiujuer.tips.factory.presenter.AppPresenter;
-import net.qiujuer.tips.factory.service.IMissServiceInterface;
+import net.qiujuer.tips.factory.service.MissBinderInterface;
 import net.qiujuer.tips.factory.service.MissService;
 import net.qiujuer.tips.factory.service.bean.MissServiceBean;
 
@@ -64,7 +64,7 @@ public class Cache extends BroadcastReceiver {
 
     public List<RecordViewModel> getRecords() {
         try {
-            IMissServiceInterface service = AppPresenter.getService();
+            MissBinderInterface service = AppPresenter.getService();
             if (service == null)
                 return null;
             MissServiceBean bean = service.getMissBean();
@@ -79,7 +79,7 @@ public class Cache extends BroadcastReceiver {
 
     public List<ContactViewModel> getContacts() {
         try {
-            IMissServiceInterface service = AppPresenter.getService();
+            MissBinderInterface service = AppPresenter.getService();
             if (service == null)
                 return null;
             MissServiceBean bean = service.getMissBean();
@@ -94,7 +94,7 @@ public class Cache extends BroadcastReceiver {
 
     public List<NewestModel> getNewest() {
         try {
-            IMissServiceInterface service = AppPresenter.getService();
+            MissBinderInterface service = AppPresenter.getService();
             if (service == null)
                 return null;
             MissServiceBean bean = service.getMissBean();
@@ -115,7 +115,7 @@ public class Cache extends BroadcastReceiver {
                 @Override
                 public void run() {
                     try {
-                        IMissServiceInterface service = AppPresenter.getService();
+                        MissBinderInterface service = AppPresenter.getService();
                         if (service == null)
                             return;
 
@@ -142,9 +142,11 @@ public class Cache extends BroadcastReceiver {
 
     private void initData() {
         try {
-            IMissServiceInterface service = AppPresenter.getService();
+            MissBinderInterface service = AppPresenter.getService();
             if (service == null)
                 return;
+
+
             service.order();
             MissServiceBean bean = service.getMissBean();
             if (bean == null)

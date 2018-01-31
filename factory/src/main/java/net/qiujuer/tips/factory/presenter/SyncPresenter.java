@@ -10,6 +10,8 @@ import net.qiujuer.genius.kit.handler.Run;
 import net.qiujuer.genius.kit.handler.runable.Action;
 import net.qiujuer.tips.factory.R;
 import net.qiujuer.tips.factory.service.IMissServiceInterface;
+import net.qiujuer.tips.factory.service.MissBinder;
+import net.qiujuer.tips.factory.service.MissBinderInterface;
 import net.qiujuer.tips.factory.service.MissService;
 import net.qiujuer.tips.factory.view.SyncView;
 
@@ -72,7 +74,7 @@ public class SyncPresenter extends BroadcastReceiver {
 
         view.syncStart();
 
-        IMissServiceInterface serviceInterface = AppPresenter.getService();
+        MissBinderInterface serviceInterface = AppPresenter.getService();
         if (serviceInterface == null)
             return;
 
