@@ -19,18 +19,12 @@ import net.qiujuer.tips.factory.service.MissService;
 
 
 public class AppPresenter {
-    private static final Object SERVICE_LOCK = new Object();
     private static IMissServiceInterface SERVICE = null;
 
     private static ServiceConnection CONNECT = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             SERVICE = IMissServiceInterface.Stub.asInterface(iBinder);
-            if (SERVICE != null) {
-                synchronized (SERVICE_LOCK) {
-                    SERVICE_LOCK.notifyAll();
-                }
-            }
         }
 
         @Override
@@ -40,34 +34,17 @@ public class AppPresenter {
     };
 
     public static void setApplication(Application application) {
+        Model.setApplication(application);
+
         Intent serviceIntent = new Intent(application, MissService.class);
         application.startService(serviceIntent);
         bindService();
     }
 
-    public static void dispose() {
-        // Service
-        unBindService();
-    }
-
     private static void bindService() {
         Application application = Model.getApplication();
-        if (application == null)
-            return;
-        // UnBind
-        unBindService();
-
         Intent intent = new Intent(application, MissService.class);
         application.bindService(intent, CONNECT, Context.BIND_AUTO_CREATE);
-        if (SERVICE == null) {
-            synchronized (SERVICE_LOCK) {
-                try {
-                    SERVICE_LOCK.wait();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        }
     }
 
     private static void unBindService() {
@@ -87,8 +64,6 @@ public class AppPresenter {
     }
 
     public static synchronized IMissServiceInterface getService() {
-        if (SERVICE == null)
-            bindService();
         return SERVICE;
     }
 

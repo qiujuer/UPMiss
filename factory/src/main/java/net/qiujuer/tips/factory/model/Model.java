@@ -20,11 +20,11 @@ public class Model {
     private final static String TAG = Model.class.getName();
     public final static UUID EMPTY_ID = new UUID(0, 0);
 
-    public static boolean DEBUG = true;
+    public static boolean DEBUG = BuildConfig.DEBUG;
     private static Application APPLICATION;
 
-    private static RequestQueue REQUEST_QUEUE;
-    private static ExecutorService EXECUTORSERVICE;
+    private static volatile RequestQueue REQUEST_QUEUE;
+    private static volatile ExecutorService EXECUTORSERVICE;
 
 
     public static Application getApplication() {
@@ -32,59 +32,27 @@ public class Model {
     }
 
     public static void setApplication(Application application) {
-        if (application == null || application != APPLICATION) {
-            Model.log(TAG, "setApplication");
+        APPLICATION = application;
+        // DB Flow init
+        FlowManager.init(new FlowConfig.Builder(application)
+                .openDatabasesOnInit(true)
+                .build());
 
-            APPLICATION = application;
-            // DB Flow init
-            FlowManager.init(new FlowConfig.Builder(application)
-                    .openDatabasesOnInit(true)
-                    .build());
-
-            stopRequestQueue();
-            REQUEST_QUEUE = Volley.newRequestQueue(APPLICATION);
-        }
-    }
-
-    public static void dispose() {
-        // ThreadPool
-        stopThreadPool();
-
-        // Network
-        stopRequestQueue();
-
-        // DB Flow destroy
-        FlowManager.destroy();
-        APPLICATION = null;
-    }
-
-    private static void stopRequestQueue() {
-        RequestQueue queue = REQUEST_QUEUE;
-        REQUEST_QUEUE = null;
-        if (queue != null) {
-            queue.stop();
-        }
-    }
-
-    private static void stopThreadPool() {
-        ExecutorService service = EXECUTORSERVICE;
-        EXECUTORSERVICE = null;
-        if (service != null && !service.isShutdown()) {
-            try {
-                service.shutdownNow();
-                service.shutdown();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
+        Model.log(TAG, "setApplication");
     }
 
     public static RequestQueue getRequestQueue() {
+        if (REQUEST_QUEUE == null) {
+            synchronized (Model.class) {
+                if (REQUEST_QUEUE == null) {
+                    REQUEST_QUEUE = Volley.newRequestQueue(APPLICATION);
+                }
+            }
+        }
         return REQUEST_QUEUE;
     }
 
     public static Executor getThreadPool() {
-        // Check and init executor
         if (EXECUTORSERVICE == null) {
             synchronized (Model.class) {
                 if (EXECUTORSERVICE == null) {
@@ -99,6 +67,6 @@ public class Model {
 
     public static void log(String tag, String msg) {
         if (BuildConfig.DEBUG)
-            Log.e(tag, msg);
+            Log.w(tag, msg);
     }
 }

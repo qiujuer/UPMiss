@@ -2,19 +2,14 @@ package net.qiujuer.tips;
 
 
 import android.app.Activity;
+import android.os.Bundle;
 
 import net.qiujuer.tips.factory.cache.Cache;
-import net.qiujuer.tips.factory.model.Model;
 import net.qiujuer.tips.factory.presenter.AppPresenter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class Application extends android.app.Application {
-    private List<Activity> mActivities = new ArrayList<Activity>();
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -24,36 +19,57 @@ public class Application extends android.app.Application {
                 .build()
         );
 
-        Model.setApplication(this);
+        registerActivityLifecycleCallbacks(mLifecycleCallbacks);
+
+        AppPresenter.setApplication(this);
     }
 
-    public void init() {
-        AppPresenter.setApplication(this);
+    private void init() {
+
         Cache.init();
     }
 
 
+    private ActivityLifecycleCallbacks mLifecycleCallbacks = new ActivityLifecycleCallbacks() {
+        private boolean mFirstCreatedView = true;
 
-    public void dispose() {
-        AppPresenter.dispose();
-
-        // Model
-        Model.dispose();
-    }
-
-    public void addActivity(Activity activity) {
-        mActivities.add(activity);
-    }
-
-    public void removeActivity(Activity activity) {
-        mActivities.remove(activity);
-    }
-
-    public void exit() {
-        Cache.destroy();
-        for (Activity activity : mActivities) {
-            if (!activity.isFinishing())
-                activity.finish();
+        @Override
+        public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+            if (mFirstCreatedView) {
+                init();
+                mFirstCreatedView = false;
+            }
         }
-    }
+
+        @Override
+        public void onActivityStarted(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityResumed(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityPaused(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivityStopped(Activity activity) {
+
+        }
+
+        @Override
+        public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+
+        }
+
+        @Override
+        public void onActivityDestroyed(Activity activity) {
+
+        }
+    };
+
 }

@@ -14,28 +14,13 @@ import net.qiujuer.tips.view.activity.GuideActivity;
 import net.qiujuer.tips.view.activity.MainActivity;
 import net.qiujuer.tips.view.util.AnimationListener;
 
-
 public class LaunchActivity extends BaseActivity {
-    private int mDoneCount = 0;
-    private boolean mAlreadySkip = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch);
-
         iconIn();
-
-        Thread thread = new Thread("GraveTips-Launch-InitThread") {
-            @Override
-            public void run() {
-                Application application = (Application) getApplication();
-                application.init();
-                skipOnDone();
-            }
-        };
-        thread.setDaemon(true);
-        thread.start();
     }
 
     private void iconIn() {
@@ -52,7 +37,12 @@ public class LaunchActivity extends BaseActivity {
                 anim.setAnimationListener(new AnimationListener() {
                     @Override
                     public void onAnimationEnd(Animation animation) {
-                        skipOnDone();
+                        Run.getUiHandler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                skipByDelay();
+                            }
+                        }, 1000);
                     }
                 });
                 View view = findViewById(R.id.launch_icon);
@@ -61,21 +51,6 @@ public class LaunchActivity extends BaseActivity {
             }
         });
         findViewById(R.id.content).startAnimation(anim);
-    }
-
-    private void skipOnDone() {
-        if (mAlreadySkip || ((++mDoneCount) < 2))
-            return;
-
-        mAlreadySkip = true;
-
-        Run.getUiHandler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                skipByDelay();
-            }
-        }, 1000);
-
     }
 
     private void skipByDelay() {
