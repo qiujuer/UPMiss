@@ -1,0 +1,23 @@
+// local.properties
+Properties localProperties = new Properties()
+localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+// root/gradle.properties
+Map rootProperties = project.getProperties();
+
+def storeFileStr = localProperties.getProperty('RELEASE_STORE_FILE',
+        rootProperties.get('RELEASE_STORE_FILE', null))
+def storePwdStr = localProperties.getProperty('RELEASE_STORE_PASSWORD',
+        rootProperties.get('RELEASE_STORE_PASSWORD', null))
+def keyAliasStr = localProperties.getProperty('RELEASE_KEY_ALIAS',
+        rootProperties.get('RELEASE_KEY_ALIAS', null))
+def keyPwdStr = localProperties.getProperty('RELEASE_KEY_PASSWORD',
+        rootProperties.get('RELEASE_KEY_PASSWORD', null))
+
+ext {
+    propertyHaveSigningConfigs = (storeFileStr != null && storePwdStr != null && keyAliasStr != null && keyPwdStr != null)
+    propertyStoreFileStr = storeFileStr
+    propertyStorePwdStr = storePwdStr
+    propertyKeyAliasStr = keyAliasStr
+    propertyKeyPwdStr = keyPwdStr
+}
